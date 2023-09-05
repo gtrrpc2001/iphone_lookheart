@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		220782E926E327300079A031 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220782E826E327300079A031 /* AppDelegate.swift */; };
+		220782EB26E327300079A031 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220782EA26E327300079A031 /* SceneDelegate.swift */; };
+		220782ED26E327300079A031 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220782EC26E327300079A031 /* ViewController.swift */; };
+		220782F226E327330079A031 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220782F126E327330079A031 /* Assets.xcassets */; };
+		220782F526E327330079A031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220782F326E327330079A031 /* LaunchScreen.storyboard */; };
+		220782FD26E334EA0079A031 /* Pods_LookHeart_100.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822ACAF8B980C200D9A1FB5F /* Pods_LookHeart_100.framework */; };
+		2207830926E4DFE70079A031 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2207830826E4DFE70079A031 /* TabBarController.swift */; };
+		2207830B26E4E6920079A031 /* homekit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2207830A26E4E6920079A031 /* homekit@2x.png */; };
+		2207830D26E4E69E0079A031 /* person.crop.circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2207830C26E4E69E0079A031 /* person.crop.circle@2x.png */; };
+		2207830F26E4E6A40079A031 /* gear.circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2207830E26E4E6A40079A031 /* gear.circle@2x.png */; };
+		2207831326E4EDD90079A031 /* settingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2207831226E4EDD90079A031 /* settingVC.swift */; };
+		2207831526E629FC0079A031 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 2207831426E629FC0079A031 /* launch.png */; };
+		221CD91B26F44FF3001B05FE /* bolt.heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 221CD91A26F44FF3001B05FE /* bolt.heart@2x.png */; };
+		2298356C26EF1F2E00AAA0DB /* arrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2298356B26EF1F2E00AAA0DB /* arrVC.swift */; };
+		2298356E26EF238F00AAA0DB /* chart.xyaxis.line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2298356D26EF238F00AAA0DB /* chart.xyaxis.line@2x.png */; };
+		22C0FE9F28765960007438CC /* figure.walk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22C0FE9E28765960007438CC /* figure.walk@2x.png */; };
+		22C0FEA128765B15007438CC /* bpmGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C0FEA028765B15007438CC /* bpmGraph.swift */; };
+		621A19242A53EB1900E7AEB5 /* ExerciseRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A19232A53EB1900E7AEB5 /* ExerciseRecordVC.swift */; };
+		621A19262A57E94800E7AEB5 /* RecentRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A19252A57E94800E7AEB5 /* RecentRecordVC.swift */; };
+		628EF21F2A0A3D6E009E3B95 /* SignupView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF21E2A0A3D6E009E3B95 /* SignupView1.swift */; };
+		628EF22D2A0C897B009E3B95 /* SignupView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF22C2A0C897B009E3B95 /* SignupView2.swift */; };
+		628EF22F2A0CAF82009E3B95 /* SignupView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF22E2A0CAF82009E3B95 /* SignupView3.swift */; };
+		628EF2322A0E0A80009E3B95 /* SignupView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2312A0E0A80009E3B95 /* SignupView4.swift */; };
+		628EF2342A122C99009E3B95 /* agree.txt in Resources */ = {isa = PBXBuildFile; fileRef = 628EF2332A122C99009E3B95 /* agree.txt */; };
+		628EF2362A122CA0009E3B95 /* privacy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 628EF2352A122CA0009E3B95 /* privacy.txt */; };
+		628EF2542A130C5E009E3B95 /* arrGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2532A130C5E009E3B95 /* arrGraph.swift */; };
+		628EF2562A130C9D009E3B95 /* calorieGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2552A130C9D009E3B95 /* calorieGraph.swift */; };
+		628EF2582A130CAC009E3B95 /* stepAndDistanceGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2572A130CAC009E3B95 /* stepAndDistanceGraph.swift */; };
+		628EF25A2A130CC1009E3B95 /* temperatureGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF2592A130CC1009E3B95 /* temperatureGraph.swift */; };
+		628EF25C2A147E4C009E3B95 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF25B2A147E4C009E3B95 /* ProfileVC.swift */; };
+		628EF25E2A1DE7B2009E3B95 /* ExerciseListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF25D2A1DE7B2009E3B95 /* ExerciseListVC.swift */; };
+		628EF2602A1F0E9D009E3B95 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628EF25F2A1F0E9D009E3B95 /* CustomCell.swift */; };
+		629401772A02598300442E88 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629401762A02598300442E88 /* LoginView.swift */; };
+		62D0905A2A29799E00784A58 /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D090592A29799E00784A58 /* ExerciseVC.swift */; };
+		62D090652A2DBF2500784A58 /* arrSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D090622A2DBF2500784A58 /* arrSound.mp3 */; };
+		62D090662A2DBF2500784A58 /* noncontactSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D090632A2DBF2500784A58 /* noncontactSound.mp3 */; };
+		62D090672A2DBF2500784A58 /* heartAttackSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D090642A2DBF2500784A58 /* heartAttackSound.mp3 */; };
+		62D0906B2A2DD0DE00784A58 /* AtrialFibrillaionSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D090682A2DD0DE00784A58 /* AtrialFibrillaionSound.mp3 */; };
+		62D0906C2A2DD0DE00784A58 /* BradycardiaSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D090692A2DD0DE00784A58 /* BradycardiaSound.mp3 */; };
+		62D0906D2A2DD0DE00784A58 /* TarchycardiaSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D0906A2A2DD0DE00784A58 /* TarchycardiaSound.mp3 */; };
+		62D0906F2A2DD2E000784A58 /* myoSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D0906E2A2DD2E000784A58 /* myoSound.mp3 */; };
+		62D090712A39B38800784A58 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D090702A39B38800784A58 /* SummaryVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		220782E526E327300079A031 /* LookHeart 100.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LookHeart 100.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		220782E826E327300079A031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		220782EA26E327300079A031 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		220782EC26E327300079A031 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		220782F126E327330079A031 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		220782F426E327330079A031 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		220782F626E327330079A031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2207830826E4DFE70079A031 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2207830A26E4E6920079A031 /* homekit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "homekit@2x.png"; path = "Assets.xcassets/homekit@2x.png"; sourceTree = "<group>"; };
+		2207830C26E4E69E0079A031 /* person.crop.circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "person.crop.circle@2x.png"; path = "Assets.xcassets/person.crop.circle@2x.png"; sourceTree = "<group>"; };
+		2207830E26E4E6A40079A031 /* gear.circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gear.circle@2x.png"; path = "Assets.xcassets/gear.circle@2x.png"; sourceTree = "<group>"; };
+		2207831226E4EDD90079A031 /* settingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingVC.swift; sourceTree = "<group>"; };
+		2207831426E629FC0079A031 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		221CD91A26F44FF3001B05FE /* bolt.heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bolt.heart@2x.png"; sourceTree = "<group>"; };
+		2298356B26EF1F2E00AAA0DB /* arrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrVC.swift; sourceTree = "<group>"; };
+		2298356D26EF238F00AAA0DB /* chart.xyaxis.line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chart.xyaxis.line@2x.png"; sourceTree = "<group>"; };
+		22C0FE9E28765960007438CC /* figure.walk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "figure.walk@2x.png"; path = "Assets.xcassets/figure.walk@2x.png"; sourceTree = "<group>"; };
+		22C0FEA028765B15007438CC /* bpmGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bpmGraph.swift; sourceTree = "<group>"; };
+		621A19232A53EB1900E7AEB5 /* ExerciseRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRecordVC.swift; sourceTree = "<group>"; };
+		621A19252A57E94800E7AEB5 /* RecentRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentRecordVC.swift; sourceTree = "<group>"; };
+		628EF21E2A0A3D6E009E3B95 /* SignupView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView1.swift; sourceTree = "<group>"; };
+		628EF22C2A0C897B009E3B95 /* SignupView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView2.swift; sourceTree = "<group>"; };
+		628EF22E2A0CAF82009E3B95 /* SignupView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView3.swift; sourceTree = "<group>"; };
+		628EF2302A0DDE63009E3B95 /* LookHeart 100.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LookHeart 100.entitlements"; sourceTree = "<group>"; };
+		628EF2312A0E0A80009E3B95 /* SignupView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView4.swift; sourceTree = "<group>"; };
+		628EF2332A122C99009E3B95 /* agree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = agree.txt; sourceTree = "<group>"; };
+		628EF2352A122CA0009E3B95 /* privacy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privacy.txt; sourceTree = "<group>"; };
+		628EF2532A130C5E009E3B95 /* arrGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrGraph.swift; sourceTree = "<group>"; };
+		628EF2552A130C9D009E3B95 /* calorieGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calorieGraph.swift; sourceTree = "<group>"; };
+		628EF2572A130CAC009E3B95 /* stepAndDistanceGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stepAndDistanceGraph.swift; sourceTree = "<group>"; };
+		628EF2592A130CC1009E3B95 /* temperatureGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = temperatureGraph.swift; sourceTree = "<group>"; };
+		628EF25B2A147E4C009E3B95 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		628EF25D2A1DE7B2009E3B95 /* ExerciseListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListVC.swift; sourceTree = "<group>"; };
+		628EF25F2A1F0E9D009E3B95 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		629401762A02598300442E88 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		62D090592A29799E00784A58 /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		62D090622A2DBF2500784A58 /* arrSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = arrSound.mp3; sourceTree = "<group>"; };
+		62D090632A2DBF2500784A58 /* noncontactSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = noncontactSound.mp3; sourceTree = "<group>"; };
+		62D090642A2DBF2500784A58 /* heartAttackSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartAttackSound.mp3; sourceTree = "<group>"; };
+		62D090682A2DD0DE00784A58 /* AtrialFibrillaionSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AtrialFibrillaionSound.mp3; sourceTree = "<group>"; };
+		62D090692A2DD0DE00784A58 /* BradycardiaSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BradycardiaSound.mp3; sourceTree = "<group>"; };
+		62D0906A2A2DD0DE00784A58 /* TarchycardiaSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TarchycardiaSound.mp3; sourceTree = "<group>"; };
+		62D0906E2A2DD2E000784A58 /* myoSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = myoSound.mp3; sourceTree = "<group>"; };
+		62D090702A39B38800784A58 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		822ACAF8B980C200D9A1FB5F /* Pods_LookHeart_100.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookHeart_100.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7323ABC3465B91582A3EA2B /* Pods-LookHeart 100.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookHeart 100.debug.xcconfig"; path = "Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E8E894361B817EE4DE15A8 /* Pods-LookHeart 100.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookHeart 100.release.xcconfig"; path = "Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220782E226E327300079A031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220782FD26E334EA0079A031 /* Pods_LookHeart_100.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09B0B6ABA818394DD62F5F74 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7323ABC3465B91582A3EA2B /* Pods-LookHeart 100.debug.xcconfig */,
+				E6E8E894361B817EE4DE15A8 /* Pods-LookHeart 100.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		220782DC26E327300079A031 = {
+			isa = PBXGroup;
+			children = (
+				220782E726E327300079A031 /* LookHeart 100 */,
+				220782E626E327300079A031 /* Products */,
+				09B0B6ABA818394DD62F5F74 /* Pods */,
+				EBA4DE3EAE73DA0136A18B2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		220782E626E327300079A031 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				220782E526E327300079A031 /* LookHeart 100.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		220782E726E327300079A031 /* LookHeart 100 */ = {
+			isa = PBXGroup;
+			children = (
+				628EF2302A0DDE63009E3B95 /* LookHeart 100.entitlements */,
+				221CD91A26F44FF3001B05FE /* bolt.heart@2x.png */,
+				2298356D26EF238F00AAA0DB /* chart.xyaxis.line@2x.png */,
+				2207831426E629FC0079A031 /* launch.png */,
+				2207830A26E4E6920079A031 /* homekit@2x.png */,
+				2207830C26E4E69E0079A031 /* person.crop.circle@2x.png */,
+				22C0FE9E28765960007438CC /* figure.walk@2x.png */,
+				2207830E26E4E6A40079A031 /* gear.circle@2x.png */,
+				220782F626E327330079A031 /* Info.plist */,
+				220782F326E327330079A031 /* LaunchScreen.storyboard */,
+				220782F126E327330079A031 /* Assets.xcassets */,
+				220782EA26E327300079A031 /* SceneDelegate.swift */,
+				220782E826E327300079A031 /* AppDelegate.swift */,
+				62D0905B2A2DB93C00784A58 /* AlertSound */,
+				628EF2372A122E5C009E3B95 /* Login */,
+				62D090722A3AF83E00784A58 /* Summary */,
+				62D090732A3AF92B00784A58 /* Exercise */,
+				220782EC26E327300079A031 /* ViewController.swift */,
+				2207830826E4DFE70079A031 /* TabBarController.swift */,
+				2298356B26EF1F2E00AAA0DB /* arrVC.swift */,
+				2207831226E4EDD90079A031 /* settingVC.swift */,
+				628EF25B2A147E4C009E3B95 /* ProfileVC.swift */,
+			);
+			path = "LookHeart 100";
+			sourceTree = "<group>";
+		};
+		628EF2262A0B6420009E3B95 /* Txt */ = {
+			isa = PBXGroup;
+			children = (
+				628EF2352A122CA0009E3B95 /* privacy.txt */,
+				628EF2332A122C99009E3B95 /* agree.txt */,
+			);
+			path = Txt;
+			sourceTree = "<group>";
+		};
+		628EF2372A122E5C009E3B95 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				628EF2262A0B6420009E3B95 /* Txt */,
+				629401762A02598300442E88 /* LoginView.swift */,
+				628EF21E2A0A3D6E009E3B95 /* SignupView1.swift */,
+				628EF22C2A0C897B009E3B95 /* SignupView2.swift */,
+				628EF22E2A0CAF82009E3B95 /* SignupView3.swift */,
+				628EF2312A0E0A80009E3B95 /* SignupView4.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		62D0905B2A2DB93C00784A58 /* AlertSound */ = {
+			isa = PBXGroup;
+			children = (
+				62D0906E2A2DD2E000784A58 /* myoSound.mp3 */,
+				62D090682A2DD0DE00784A58 /* AtrialFibrillaionSound.mp3 */,
+				62D090692A2DD0DE00784A58 /* BradycardiaSound.mp3 */,
+				62D0906A2A2DD0DE00784A58 /* TarchycardiaSound.mp3 */,
+				62D090622A2DBF2500784A58 /* arrSound.mp3 */,
+				62D090642A2DBF2500784A58 /* heartAttackSound.mp3 */,
+				62D090632A2DBF2500784A58 /* noncontactSound.mp3 */,
+			);
+			path = AlertSound;
+			sourceTree = "<group>";
+		};
+		62D090722A3AF83E00784A58 /* Summary */ = {
+			isa = PBXGroup;
+			children = (
+				62D090702A39B38800784A58 /* SummaryVC.swift */,
+				22C0FEA028765B15007438CC /* bpmGraph.swift */,
+				628EF2532A130C5E009E3B95 /* arrGraph.swift */,
+				628EF2552A130C9D009E3B95 /* calorieGraph.swift */,
+				628EF2572A130CAC009E3B95 /* stepAndDistanceGraph.swift */,
+				628EF2592A130CC1009E3B95 /* temperatureGraph.swift */,
+			);
+			path = Summary;
+			sourceTree = "<group>";
+		};
+		62D090732A3AF92B00784A58 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				628EF25F2A1F0E9D009E3B95 /* CustomCell.swift */,
+				62D090592A29799E00784A58 /* ExerciseVC.swift */,
+				628EF25D2A1DE7B2009E3B95 /* ExerciseListVC.swift */,
+				621A19232A53EB1900E7AEB5 /* ExerciseRecordVC.swift */,
+				621A19252A57E94800E7AEB5 /* RecentRecordVC.swift */,
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		EBA4DE3EAE73DA0136A18B2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				822ACAF8B980C200D9A1FB5F /* Pods_LookHeart_100.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		220782E426E327300079A031 /* LookHeart 100 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 220782F926E327330079A031 /* Build configuration list for PBXNativeTarget "LookHeart 100" */;
+			buildPhases = (
+				7663D2FABC06CE4CC49D65DE /* [CP] Check Pods Manifest.lock */,
+				220782E126E327300079A031 /* Sources */,
+				220782E226E327300079A031 /* Frameworks */,
+				220782E326E327300079A031 /* Resources */,
+				A433018ED8910B88339A47CC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LookHeart 100";
+			productName = "LookHeart 100";
+			productReference = 220782E526E327300079A031 /* LookHeart 100.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		220782DD26E327300079A031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					220782E426E327300079A031 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 220782E026E327300079A031 /* Build configuration list for PBXProject "LookHeart100" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 220782DC26E327300079A031;
+			productRefGroup = 220782E626E327300079A031 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				220782E426E327300079A031 /* LookHeart 100 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		220782E326E327300079A031 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62D0906D2A2DD0DE00784A58 /* TarchycardiaSound.mp3 in Resources */,
+				2207831526E629FC0079A031 /* launch.png in Resources */,
+				62D0906C2A2DD0DE00784A58 /* BradycardiaSound.mp3 in Resources */,
+				628EF2362A122CA0009E3B95 /* privacy.txt in Resources */,
+				221CD91B26F44FF3001B05FE /* bolt.heart@2x.png in Resources */,
+				2207830F26E4E6A40079A031 /* gear.circle@2x.png in Resources */,
+				62D0906F2A2DD2E000784A58 /* myoSound.mp3 in Resources */,
+				62D0906B2A2DD0DE00784A58 /* AtrialFibrillaionSound.mp3 in Resources */,
+				220782F526E327330079A031 /* LaunchScreen.storyboard in Resources */,
+				2298356E26EF238F00AAA0DB /* chart.xyaxis.line@2x.png in Resources */,
+				22C0FE9F28765960007438CC /* figure.walk@2x.png in Resources */,
+				62D090662A2DBF2500784A58 /* noncontactSound.mp3 in Resources */,
+				220782F226E327330079A031 /* Assets.xcassets in Resources */,
+				62D090652A2DBF2500784A58 /* arrSound.mp3 in Resources */,
+				628EF2342A122C99009E3B95 /* agree.txt in Resources */,
+				62D090672A2DBF2500784A58 /* heartAttackSound.mp3 in Resources */,
+				2207830B26E4E6920079A031 /* homekit@2x.png in Resources */,
+				2207830D26E4E69E0079A031 /* person.crop.circle@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7663D2FABC06CE4CC49D65DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LookHeart 100-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A433018ED8910B88339A47CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220782E126E327300079A031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628EF22F2A0CAF82009E3B95 /* SignupView3.swift in Sources */,
+				220782ED26E327300079A031 /* ViewController.swift in Sources */,
+				628EF2602A1F0E9D009E3B95 /* CustomCell.swift in Sources */,
+				628EF2542A130C5E009E3B95 /* arrGraph.swift in Sources */,
+				2207830926E4DFE70079A031 /* TabBarController.swift in Sources */,
+				628EF25C2A147E4C009E3B95 /* ProfileVC.swift in Sources */,
+				628EF25E2A1DE7B2009E3B95 /* ExerciseListVC.swift in Sources */,
+				621A19242A53EB1900E7AEB5 /* ExerciseRecordVC.swift in Sources */,
+				628EF22D2A0C897B009E3B95 /* SignupView2.swift in Sources */,
+				2298356C26EF1F2E00AAA0DB /* arrVC.swift in Sources */,
+				628EF2582A130CAC009E3B95 /* stepAndDistanceGraph.swift in Sources */,
+				220782E926E327300079A031 /* AppDelegate.swift in Sources */,
+				220782EB26E327300079A031 /* SceneDelegate.swift in Sources */,
+				22C0FEA128765B15007438CC /* bpmGraph.swift in Sources */,
+				62D090712A39B38800784A58 /* SummaryVC.swift in Sources */,
+				621A19262A57E94800E7AEB5 /* RecentRecordVC.swift in Sources */,
+				629401772A02598300442E88 /* LoginView.swift in Sources */,
+				628EF25A2A130CC1009E3B95 /* temperatureGraph.swift in Sources */,
+				628EF21F2A0A3D6E009E3B95 /* SignupView1.swift in Sources */,
+				628EF2322A0E0A80009E3B95 /* SignupView4.swift in Sources */,
+				628EF2562A130C9D009E3B95 /* calorieGraph.swift in Sources */,
+				2207831326E4EDD90079A031 /* settingVC.swift in Sources */,
+				62D0905A2A29799E00784A58 /* ExerciseVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		220782F326E327330079A031 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220782F426E327330079A031 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		220782F726E327330079A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LOOKHEART;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		220782F826E327330079A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LOOKHEART;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		220782FA26E327330079A031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7323ABC3465B91582A3EA2B /* Pods-LookHeart 100.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LookHeart 100/LookHeart 100.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4MHFKFG489;
+				INFOPLIST_FILE = "LookHeart 100/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = medsyslab.co.kr.lookheart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		220782FB26E327330079A031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E8E894361B817EE4DE15A8 /* Pods-LookHeart 100.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LookHeart 100/LookHeart 100.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4MHFKFG489;
+				INFOPLIST_FILE = "LookHeart 100/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = medsyslab.co.kr.lookheart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		220782E026E327300079A031 /* Build configuration list for PBXProject "LookHeart100" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220782F726E327330079A031 /* Debug */,
+				220782F826E327330079A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		220782F926E327330079A031 /* Build configuration list for PBXNativeTarget "LookHeart 100" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220782FA26E327330079A031 /* Debug */,
+				220782FB26E327330079A031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 220782DD26E327300079A031 /* Project object */;
+}

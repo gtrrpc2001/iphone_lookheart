@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-LookHeart 100/Pods-LookHeart 100-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework
+${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework

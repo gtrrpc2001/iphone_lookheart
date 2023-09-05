@@ -1,0 +1,30 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - SnapKit (5.0.1)
+  - Then (2.7.0)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Charts
+  - SnapKit
+  - Then
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - SnapKit
+    - Then
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: 1e9b088f3c4e5a106e48924ad4df18824cdd5b56
+
+COCOAPODS: 1.10.2
