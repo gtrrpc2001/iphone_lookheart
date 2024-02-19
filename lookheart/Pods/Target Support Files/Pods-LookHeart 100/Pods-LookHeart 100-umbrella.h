@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_LookHeart_100VersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_LookHeart_100VersionString[];
+FOUNDATION_EXPORT double Pods_LOOKHEART_100VersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_LOOKHEART_100VersionString[];
 

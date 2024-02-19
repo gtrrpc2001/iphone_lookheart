@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_LookHeart_100 : NSObject
+@interface PodsDummy_Pods_LOOKHEART_100 : NSObject
 @end
-@implementation PodsDummy_Pods_LookHeart_100
+@implementation PodsDummy_Pods_LOOKHEART_100
 @end

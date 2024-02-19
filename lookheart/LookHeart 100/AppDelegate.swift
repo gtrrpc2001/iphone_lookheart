@@ -7,6 +7,8 @@
 
 import UIKit
 import UserNotifications
+import LookheartPackage
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,31 +16,57 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // 13이상인 경우에는 SceneDelegate에서 이미 초기화 되었으니까 바로 return
         
-        UNUserNotificationCenter.current().requestAuthorization(
-           options: [.alert, .sound, .badge],
-           completionHandler: { (granted, error) in
-             print("granted notification, \(granted)")
-           }
-         )
+        requestNotificationAuthorization()
          
-         UNUserNotificationCenter.current().delegate = self
-   
-        if #available(iOS 13.0, *) {
-            return true
-            
-        }
-        sleep(1)
-        // 13이전의 경우에는 SceneDelegate에서 해주었던 작업을 그대로 진행해주면 된다.
-        window = UIWindow()
-        //window?.rootViewController = Test()
-        window?.rootViewController = MainViewController() // 초기 ViewController
-        window?.makeKeyAndVisible()
- 
+        configureFirebase()
+        
         return true
+        
     }
     
+    
+    // 알림 권한 요청
+    func requestNotificationAuthorization() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            print("Notification permission granted: \(granted)")
+        }
+        UNUserNotificationCenter.current().delegate = self
+    }
+    
+    // FireBase 초기화
+    func configureFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("\(type(of: self)): \(#function)")
+                                    
+        if propProfil.isLogin {
+            
+            // Send Log
+            NetworkManager.shared.sendLog(id: propEmail, userType: .User, action: .Shutdown)
+            
+            let prevHour = defaults.string(forKey: "\(propEmail)prevHour")!
+            
+            // Send Data
+            if connectionFlag && HourlyDataManager.shared.calorie != 0 {
+                BluetoothManager.shared.sendTenSecondData()
+                BluetoothManager.shared.sendHourlyData(hour: prevHour)
+            }
+            
+            // Set Default Data
+            HealthDataManager.shared.setUserDefaultData()
+            HourlyDataManager.shared.setUserDefaultData()
+            
+            defaults.set(propCurrentDate, forKey: "\(propEmail)\(PrevDateKey)")
+            defaults.set(propCurrentHour, forKey: "\(propEmail)\(PrevHourKey)")
+        }
+        
+        sleep(2)
+        
+        print("💣💣💣")
+    }
 }
 
 // 추가
@@ -52,33 +80,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-
-        // deep link처리 시 아래 url값 가지고 처리
-//        let url = response.notification.request.content.userInfo
-
         completionHandler()
     }
 }
-
-
-// iOS 14 ~
-//
-//import UIKit
-//import SwiftUI
-//
-//class AppDelegate: NSObject, UIApplicationDelegate{
-//    func application(
-//        _ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-//            return true
-//        }
-//
-//    func application(
-//      _ application: UIApplication,
-//      configurationForConnecting connectingSceneSession: UISceneSession,
-//      options: UIScene.ConnectionOptions
-//    ) -> UISceneConfiguration {
-//      let sceneConfig = UISceneConfiguration(name: nil, sessionRole: connectingSceneSession.role)
-//      sceneConfig.delegateClass = SceneDelegate.self
-//      return sceneConfig
-//    }
-//}

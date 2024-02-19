@@ -1,0 +1,409 @@
+"title_activity_login" = "LOOKHEART";
+"titleText" = "LOOKHEART";
+"joinDate" = "가입일";
+"loginLabel" = "로그인";
+"loginText" = "LOOKHEART 서비스 이용을 환영합니다.\n가입하신 아이디와 비밀번호를 입력하세요.";
+"email_Label" = "아이디";
+"email_Hint" = "이메일을 입력하세요";
+"password_Label" = "비밀번호";
+"password_Hint" = "비밀번호를 입력하세요";
+"autoLogin" = "자동로그인";
+"findEmailPassword" = "이메일/비밀번호 찾기";
+"signupHelpText" = "LOOKHEART 이용이 처음이신가요?";
+"signupButton" = "회원가입";
+
+"idAndPwHelp" = "이메일과 비밀번호를 입력하세요";
+"loginSuccess" = "로그인 성공!";
+"loginFailed" = "로그인 실패";
+"incorrectlyLogin" = "이메일 또는 비밀번호를 잘못 입력했습니다.";
+"userDataComplete" = "사용자 데이터를 받았습니다";
+"serverErr" = "서버에서 데이터를 확인하지 못했습니다.";
+"duplicateLogin" = "다른 곳에서 로그인 중입니다. \n기존 아이디를 로그아웃하고 로그인해주세요.";
+"noti" = "알림";
+"notAgree" = "동의하지 않았습니다";
+"reject" = "취소";
+
+// <!--    SignUp first    -->
+"signup1" = "회원가입 1/4";
+"agree" = "동의하기";
+"back" = "뒤로가기";
+"next" = "다음으로";
+
+// <!--    SignUp Second    -->
+"signup2" = "회원가입 2/4";
+
+// <!--    SignUp third    -->x
+"signup3" = "회원가입 3/4";
+"id_guide" = "사용중인 실제 이메일을 입력해주세요.";
+"id_Label" = "아이디 입력";
+"num_Label" = "인증번호 입력";
+"check_Label" = "확인";
+"ok" = "확인";
+"pw_Label" = "비밀번호 입력";
+"rpw_Label" = "비밀번호 재입력";
+"rpw_Label_hint" = "비밀번호 재입력해주세요";
+"emailHelp" = "유효한 이메일을 입력해주세요";
+"passwordHelp" = "대문자, 소문자, 숫자, 특수문자를 포함한 10자리 이상의 비밀번호";
+"passwordHelp2" = "* 10자 이상의 대소문자, 숫자, 특수 문자 포함 비밀번호";
+"reEnterPasswordHelp" = "비밀번호가 일치하지 않습니다";
+"authSuccess" = "인증 성공";
+"dupID" = "존재하는 아이디입니다.\n새로운 아이디를 다시 입력해주세요.";
+"checkEmail" = "이메일 형식을 확인해주세요.";
+"sendVerification" = "인증번호를 전송하였습니다.";
+"confirmVerification" = "인증번호를 다시 확인해주세요.";
+
+// <!--    SignUp fourth    -->
+"signup4" = "회원가입 4/4";
+"name_Label" = "이름";
+"firstname" = "이름";
+"firstnameHelp" = "성을 입력하세요";
+"lastname" = "성";
+"lastnameHelp" = "이름을 입력하세요";
+"height_Label" = "신장(cm)";
+"height" = "신장";
+"weight_Label" = "몸무게(kg)";
+"weight" = "몸무게";
+"birthday_Label" = "생년월일";
+"gender" = "성별";
+"male_Label" = "남자";
+"female_Label" = "여자";
+"signup_complete" = "가입완료";
+"nameHelp" = "올바른 이름을 입력해주세요";
+"heightHelp" = "올바른 신장을 입력해주세요";
+"weightHelp" = "올바른 몸무게를 입력해주세요";
+"birthdayHelp" = "정확한 생년월일을 선택해주세요";
+"formatted_date" = "%1$d년 %2$d월 %3$d일";
+"enterAgain" = "\n을(를) 다시 입력해주세요";
+"physicalenterAgain" = "신체 정보를 다시 입력해주세요.";
+
+"nameHintText" = "이름을 입력해주세요";
+"heightHintText" = "신장을 입력해주세요";
+"weightHintText" = "몸무게를 입력해주세요";
+"phoneHintText" = "올바른 휴대폰 번호를 입력해주세요";
+"phoneHintText2" = "휴대폰 번호를 입력해주세요";
+"phoneHintText3" = "휴대폰 번호";
+"numberHintText" = "올바른 숫자를 입력해주세요";
+
+"returnLogin" = "로그인 페이지로 돌아갑니다.";
+"update" = "아이폰 업데이트 필요합니다.";
+
+// <!--    Home    -->
+"rest" = "휴식";
+"exercise" = "활동";
+"sleep" = "수면";
+"arr" = "비정상맥박";
+
+"eCal" = "활동 칼로리";
+"homeECal" = "활동 칼로리";
+"eCalValue" = "0 kcal";
+"eCalValue2" = "kcal";
+
+"step" = "걸음수";
+"stepValue" = "0 걸음";
+"stepValue2" = "걸음";
+
+"temperature" = "피부온도";
+"temperatureValue" = "- °C";
+"temperatureValue2" = "°C";
+
+"distance" = "이동거리";
+"distanceM" = "거리";
+"distanceValue" = "0.000 km";
+"distanceValue2" = "km";
+"distanceValue3" = "0 km";
+"distanceM2" = "m";
+
+"home_maxBpm" = "Max";
+"home_minBpm" = "Min";
+"home_avgBpm" = "Avg";
+"home_hrv" = "HRV";
+"home_hrv_unit" = "ms";
+
+// <!--    summary    -->
+"summaryBpm" = "심박";
+"summaryBpm_low" = "bpm";
+"summaryArr" = "비정상맥박";
+"summaryCal" = "칼로리";
+"summaryStep" = "걸음";
+"summaryHRV" = "맥박변동률";
+
+"today" = "Today";
+"twoDays" = "2 Days";
+"threeDays" = "3 Days";
+
+// <!--    summaryArr    -->
+"arrTimes" = "비정상맥박\n(times/Day)";
+
+// <!--    summaryCal    -->
+"summaryTCal" = "총 칼로리";
+"summaryECal" = "활동 칼로리";
+"tCalTitle" = "총 칼로리";
+"eCalTitle" = "활동 칼로리";
+
+// <!--    summaryHRV    -->
+"avgHRV" = "평균변동률";
+
+// <!--    summaryBPM    -->
+"avgBPM" = "평균심박수";
+
+// <!--    auth    -->
+"enterInfo" = "개인정보를 입력해주세요.";
+"findIDResult" = "아이디 찾기 결과";
+"failedPW" = "비밀번호를 찾지 못했습니다.";
+"noEnteredID" = "이메일을 입력하지 않았습니다.";
+"emailNotExist" = "존재하지 않는 이메일입니다.\n이메일을 다시 입력해주세요.";
+"passwordComp" = "비밀번호 변경 완료";
+"reconfirmPW" = "비밀번호를 다시 확인해주세요.";
+"search" = "찾 기";
+"registeredEmailInfo" = "가입된 이메일을 입력해주세요.";
+"sendCertification" = "인증번호 전송";
+"CertificationInfo" = "이메일에 전송된 인증번호를 입력해주세요.";
+"CertificationTitle" = "인증번호";
+"newPwInfo" = "보안을 위해 비밀번호를 업데이트하세요.";
+"findID" = "아이디 찾기";
+"findPW" = "비밀번호 찾기";
+"search" = "찾기";
+
+// <!--    Fragment    -->
+"fragment_day" = "Day";
+"fragment_week" = "Week";
+"fragment_month" = "Month";
+"fragment_year" = "Year";
+"fragment_bpm" = "BPM";
+
+// <!--    ArrFragment    -->
+"againLater" = "잠시 후 시도해주세요.";
+
+"arrState" = "상태 :";
+"arrType" = "종류 :";
+
+"typeArr" = "비정상 맥박";
+"typeFastArr" = "빠른 맥박";
+"typeSlowArr" = "느린 맥박";
+"typeHeavyArr" = "불규칙 맥박";
+
+"type_Rest" = "휴식";
+"type_Exercise" = "활동";
+"type_Sleep" = "수면";
+
+// <!--    ProfileFragment    -->
+"logout" = "로그아웃";
+"logoutHelp" = "로그아웃 하시겠습니까?";
+"rejectLogout" = "아니요";
+"sir" = "님";
+"basic" = "기본정보";
+"target" = "목표량";
+"setting" = "설정";
+"ChangePw" = "비밀번호 변경";
+
+//<!--    profile1    -->
+"age" = "나이";
+"saveData" = "저장되었습니다";
+"failSaveData" = "저장 실패";
+"profile_save" = "저 장";
+"profile_sleep" = "취침시간";
+"profile_wakeup" = "기상시간";
+"profile_phone" = "휴대폰 번호('-'제외)";
+"profile_HelpInfo1" = "입력하신 개인정보는";
+"profile_HelpInfo2" = "암호화되어 안전하게 관리합니다.";
+
+// <!--    profile2    -->
+"profile2_HelpInfo1" = "나에게 맞는 기준을 설정하고,";
+"profile2_HelpInfo2" = "매일의 건강 목표를 달성해보세요.";
+"profile2_bpmInfo" = "성인 평균 활동 기준은 bpm 90입니다.";
+
+"profile2_bpm" = "활동 기준 bpm";
+"profile2_steps" = "걸음수";
+"profile2_distance" = "걸음거리";
+"profile2_tCal" = "총 칼로리";
+"profile2_aCal" = "활동 칼로리";
+
+// <!--    profile3    -->
+"profile3_title" = "앱 푸쉬 알림";
+"profile3_emergency" = "응급상황";
+"profile3_myo" = "근전도";
+"profile3_nonContact" = "전극떨어짐";
+"profile3_guardianTitle" = "보호자 알림";
+"profile3_guardianNoti" = "보호자 알림 기능";
+
+"profile3_arrInfo1" = "비정상맥박이 기준 횟수 이상 발생 시";
+"profile3_arrInfo2" = "보호자에게 알림 메시지를 전송합니다.";
+"profile3_arrNumber" = "알림발생 기준 횟수";
+"profile3_time" = "회";
+"profile3_guardianNumber1" = "보호자 연락처1('-' 제외)";
+"profile3_guardianNumber2" = "보호자 연락처2('-' 제외)";
+
+"profile3_on" = "사용";
+"profile3_off" = "해제";
+
+// <!--    guardian    -->
+"guardian" = "보호자";
+"setGuardianComp" = "보호자 설정 완료";
+"setGuardianFail" = "보호자 설정 실패";
+"setupGuardian" = "보호자 설정";
+"setupGuardianTxt" = "핸드폰 번호를 정확하게 입력해주세요";
+"nextGuardianPhone" = "다음에";
+
+// <!--    HOME Fragment    -->
+"exit" = "종료하시겠습니까?";
+"exit2" = "종료";
+"notSupportBle" = "블루투스 미지원 기기입니다.";
+
+// <!--    NOTIFICATION    -->
+"notiTypeArr" = "비정상맥박 발생!";
+"notiTypeFastArr" = "빠른맥박 발생!";
+"notiTypeSlowArr" = "느린맥박 발생!";
+"notiTypeHeavyArr" = "연속적인 비정상맥박!";
+
+"notiTypeMyo" = "근전도 발생!";
+"notiTypeNonContact" = "전극떨어짐 발생!";
+
+"notiTime" = "시간 : ";
+"totalArr" = "비정상맥박(통합)";
+"hourlyArr" = "비정상맥박(시간)";
+
+
+
+// Arr Noti Title & Body
+"noti_totalArrTitle" = "비정상맥박 %d회 발생!";
+"noti_hourlyArrTitle" = "시간별 비정상 맥박 %d회 발생!";
+
+"noti_arrBody1" = "당신의 마음이 평화를 찾을 수 있도록,\n잠시 멈추고 휴식을 취하세요.";
+"noti_arrBody2" = "매일의 작은 휴식이,\n삶의 질을 높이는 열쇠입니다.";
+"noti_arrBody3" = "바쁜 일상 속에서도,\n작은 휴식이 큰 변화를 가져옵니다.";
+"noti_arrBody4" = "스트레스는 놓아주고,\n평안을 마음속에 채우세요.";
+"noti_arrBody5" = "잠깐 휴식시간을 가져보시는게 어떨까요?";
+"noti_arrBody6" = "작은 휴식은 큰 힘이 됩니다.";
+"noti_arrBody7" = "마음의 여유를 가져보세요.";
+"noti_arrBody8" = "휴식은 시간 낭비가 아닙니다.\n스스로를 위한 가장 큰 투자입니다.";
+
+
+
+// Arr Alert Title & Body
+"alert_totalArrTitle" = "오늘 하루 비정상 맥박이 %d회 발생하였습니다!\n";
+"alert_hourlyArrTitle" = "1시간 동안 비정상 맥박이 %d회 발생하였습니다!\n";
+
+"alert_arrBody1" = "때로는 아무것도 하지 않는 것이,\n가장 많은 것을 하는 것입니다.\n마음의 여유를 가져보세요.";
+"alert_arrBody2" = "바쁜 하루 속, 짧은 휴식도 큰 선물이 될 수 있습니다.\n잠시 자리에서 일어나 스트레칭을 해보세요.";
+"alert_arrBody3" = "잠시 멈추어 깊게 숨을 쉬고, 주변을 둘러보세요.\n작은 휴식이 큰 힘이 됩니다.";
+"alert_arrBody4" = "잠깐의 휴식이 마음을 재충전하는 데\n큰 도움이 될 거예요.";
+"alert_arrBody5" = "모든 것을 잠시 내려놓고,\n오늘만큼은 나 자신에게 휴식을 선물하세요.";
+"alert_arrBody6" = "당신도 쉴 권리가 있어요.\n오늘은 스스로를 위한 시간을 가져보세요.";
+"alert_arrBody7" = "당신의 마음도 쉴 필요가 있어요.\n잠시 멈추고, 내면의 목소리에\n귀 기울여 보세요.";
+"alert_arrBody8" = "끊임없는 열정도 좋지만,\n때로는 쉬어가며\n거리를 두는 것이 필요합니다.";
+
+
+
+// <!--    emergency    -->
+"emergency" = "응급 상황";
+"successEmergency" = "알림 전송 완료";
+"failureEmergency" = "알림 전송 실패";
+"emergencyTxt" = "아래 버튼을 누르지 않으면\n보호자에게 알림이 전송됩니다.";
+"emergencyNotiText" = "버튼을 누르지 않으면 보호자에게 알림이 전송됩니다.";
+"noGuardianSet" = "설정된 보호자가 없습니다.";
+"guardianSeverErr" = "보호자 알림 전송 실패";
+
+// <!--    battery    -->
+"setBatTitle" = "배터리 최적화 비활성화 필요";
+"setBatMessage" = "이 앱은 정상적인 작동을 위해 배터리 최적화를 비활성화할 필요가 있습니다.\n계속하려면 \'확인\'을 누르세요.";
+
+// <!--    Foreground Service    -->
+"serviceRunning" = "실행중";
+
+// <!--    Permission    -->
+"permissionToast" = "권한을 허용하지 않아\n일부 기능이 제한됩니다";
+"requiredPermission" = "필수 권한 필요";
+"requiredPermissionList" = "블루투스 연결을 위한 필수 권한이 필요합니다.\n필수 권한: 근처 기기, 위치";
+"goToSettings" = "설정으로 이동";
+"locationPermission" = "위치 권한";
+"locationPermissionMessage" = "LOOKHEART는\n앱이 닫히거나 사용 중이 아닐 때도\n위치데이터를 수집하여\n응급상황 알림 기능을 지원합니다.\n위치 권한을 항상 허용으로\n변경해주세요";
+
+
+// <!--    Day of the week    -->
+"Monday" = "월";
+"Tuesday" = "화";
+"Wednesday" = "수";
+"Thursday" = "목";
+"Friday" = "금";
+"Saturday" = "토";
+"Sunday" = "일";
+
+// <!--    bottom menu    -->
+"bottomHome" = "홈";
+"bottomSummary" = "요약";
+"bottomArr" = "비정상맥박";
+"bottomProfile" = "프로필";
+
+// <!--    Auth email    -->
+"AuthEmailTitle" = "이메일 인증";
+"AuthEmailMessage" = "이메일 인증 메일을 전송했습니다.\n현재 핸드폰에서 이메일 계정에 접속하여\n파란색 링크를 눌러주세요";
+"TargetMessage" = "파란색 링크";
+
+"authEmail" = "이메일 인증";
+"resendEmail" = "재발송";
+"authComplete" = "인증 완료";
+
+// <!--    Exercise    -->
+"startExercise" = "운동 시작";
+"endExercise" = "운동 종료";
+"notiStartExercise" = "운동을 시작하시겠습니까?";
+"notiEndExercise" = "운동을 종료하시겠습니까?";
+"exerciseTime" = "시간";
+"exerciseDistance" = "거리";
+
+
+"functionMessage" = "기능 준비중입니다.";
+"noData" = "데이터가 없습니다.";
+
+
+// <!--   Auth PhoneNumber    -->
+"requestVerification" = "인증 요청";
+"verifyNumber" = "인증 번호 :";
+"failVerification" = "인증 실패";
+"enterMobilePhone" = "핸드폰 입력";
+"enterVerificationCode" = "인증번호 입력";
+"validPhoneNumber" = "정확한 핸드폰 번호를 입력하세요";
+"exceededNumber" = "인증 번호 요청 횟수 초과";
+"exceededTime" = "인증 번호 요청 시간 초과";
+"requestsRemaining" = "인증 번호를 발송하였습니다.\n요청 횟수가 %d회 남았습니다.";
+"againMoment" = "잠시 후 다시 시도해주세요";
+"resendText" = "재전송";
+"correctVerification" = "정확한 인증 번호를 입력해주세요.";
+"identityVerification" = "본인인증";
+"helpAuthText" = "서비스 이용을 위한 본인 확인 절차입니다.\n계속하려면 인증을 진행해 주세요.";
+"threeMinutesHelpText" = "◦ 3분 이내로 인증번호를 입력해 주세요.";
+"resendAuthNumber" = "◦ 인증번호가 전송되지 않을 경우 재전송 버튼을 눌러주세요.";
+"verify" = "본인인증";
+
+// <!--   Find Id / Pw    -->
+"findHelpText" = "본인 확인을 위해 필요한 정보를 입력해 주세요.";
+"unableFindId" = "아이디를 찾을 수 없습니다.";
+
+
+// <!--   Account Deletion   -->
+"AccountDeletion" = "회원탈퇴";
+"DeletionText" = "LOOKHEART를 탈퇴하기 전에\n아래 정보를 꼭 확인해주세요";
+
+"privacyText" = "개인정보 및 파기";
+"privacyHelpText" = "회원님의 개인정보는 (주)MSL의 개인정보 처리방침에 따라 처리됩니다.\n개인정보는 법령에서 정한 기간 동안만 보관되며\n그 후 즉시 파기됩니다.";
+
+"serviceLogText" = "서비스 이용 기록";
+"serviceLogHelpText" = "법령에 의해 보존 필요성이 있는 경우(거래 기록 등),\n해당 정보는 법령에서 정한 기간 동안 보관됩니다.\n이는 서비스 이용에 대한 기록 보존이 필요한 경우에 한하여 적용됩니다.";
+
+"reSignupText" = "재가입";
+"reSignupHelpText" = "회원탈퇴 후 재가입하더라도\n탈퇴 전의 회원정보, 거래정보 등은 복구되지 않습니다.";
+
+"notesText" = "자세한 사항은 LOOKHEART 개인정보 처리방침에서\n확인하실 수 있습니다.";
+"AccountDeletionAgreeText" = "유의사항을 모두 확인하였으며, 적용 사항에 모두 동의합니다.";
+
+"AccountDeletionAgree" = "모두 동의";
+
+"mismatchesPhoneNumber" = "핸드폰 번호가 일치하지 않습니다.";
+"accountDeletionText" = "정말 탈퇴하시겠습니까?";
+
+
+
+// <!--   Server Task   -->
+"serverError" = "잠시 후 다시 시도해주세요";
+"serverInternetError" = "인터넷 연결을 확인해주세요";
+"updateApp" = "앱 업데이트가 필요합니다.\n앱 스토어에서 업데이트를 하시겠습니까?";

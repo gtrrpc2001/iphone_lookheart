@@ -1,0 +1,389 @@
+"title_activity_login" = "LOOKHEART";
+"titleText" = "LOOKHEART";
+"joinDate" = "注册日期";
+"loginLabel" = "登录";
+"loginText" = "欢迎使用LOOK HEART，请输入用户名与密码";
+"email_Label" = "请输入邮箱地址";
+"email_Hint" = "请输入您的电子邮件地址";
+"password_Label" = "密码";
+"password_Hint" = "请输入密码";
+"autoLogin" = "自动登录";
+"findEmailPassword" = "查找电子邮件/密码";
+"signupHelpText" = "您是第一次使用LOOKHEART吗?";
+"signupButton" = "注册会员";
+
+"idAndPwHelp" = "请输入您的电子邮件地址/密码";
+"loginSuccess" = "登录完成";
+"duplicateLogin" = "您正在其他地方登录。\n请登出现有账号后重新登录。";
+"loginFailed" = "登录失败";
+"incorrectlyLogin" = "邮箱或密码输入错误";
+"userDataComplete" = "我们收到了用户数据。";
+"serverErr" = "无法从服务器检索数据";
+"noti" = "通知";
+"notAgree" = "未同意";
+"reject" = "取消";
+
+// <!--    SignUp first    -->
+"signup1" = "注册会员 1/4";
+"agree" = "同意";
+"back" = "返回";
+"next" = "下一步";
+
+// <!--    SignUp Second    -->
+"signup2" = "注册会员 2/4";
+
+// <!--    SignUp third    -->x
+"signup3" = "注册会员 3/4";
+"id_guide" = "请输入实际正确的电子邮件地址";
+"id_Label" = "请输入用户名";
+"num_Label" = "请输入验证码";
+"check_Label" = "确认";
+"ok" = "确认";
+"pw_Label" = "请输入密码";
+"rpw_Label" = "请重新输入密码";
+"rpw_Label_hint" = "请重新输入密码";
+"emailHelp" = "请输入有效的电子邮件地址";
+"passwordHelp" = "请设置包含大小写字母，数字和特殊符号等10位数以上的密码。";
+"passwordHelp2" = "* 至少包含10个字符，包括大写字母、小写字母、数字和特殊字符的密码。";
+"reEnterPasswordHelp" = "密码不匹配";
+"authSuccess" = "认证成功";
+"dupID" = "这个ID是存在的。请重新输入您的新 ID。";
+"checkEmail" = "请检查您的电子邮件格式";
+"sendVerification" = "已发送验证码";
+"confirmVerification" = "请重新确认验证码";
+
+"authEmail" = "发送验证邮件";
+"resendEmail" = "重新发送";
+"authComplete" = "验证完成";
+
+// <!--    SignUp fourth    -->
+"signup4" = "注册会员 4/4";
+"name_Label" = "姓名";
+
+"firstname" = "姓";
+"firstnameHelp" = "请输入姓。";
+"lastname" = "名";
+"lastnameHelp" = "请输入名字。";
+
+"height_Label" = "身高(厘米)";
+"height" = "身高";
+"weight_Label" = "体重(公斤)";
+"weight" = "体重";
+"birthday_Label" = "出生年月日";
+"gender" = "性别";
+"male_Label" = "男性";
+"female_Label" = "女性";
+"signup_complete" = "完成注册";
+"nameHelp" = "请输入正确的姓名";
+"heightHelp" = "请输入准确的身高";
+"weightHelp" = "请输入准确的体重";
+"formatted_date" = "%1$d年 %2$d月 %3$d日";
+"enterAgain" = "请重新输入";
+"physicalenterAgain" = "请重新输入您的体格信息。";
+"birthdayHelp" = "请选择您的确切出生日期。";
+
+"nameHintText" = "请输入你的名字";
+"heightHintText" = "请输入您的身高<";
+"weightHintText" = "请输入您的体重";
+"phoneHintText" = "请输入正确的手机号码。";
+"phoneHintText2" = "请输入您的手机号码。";
+"phoneHintText3" = "手机号码";
+"numberHintText" = "请输入正确的数字。";
+
+"returnLogin" = "返回登录页面";
+"update" = "您的 iPhone 需要更新。";
+
+// <!--    Home    -->
+"rest" = "休息";
+"exercise" = "活动";
+"sleep" = "睡眠";
+"arr" = "异常脉搏";
+
+"eCal" = "运动消耗卡路里";
+"homeECal" = "运动消耗卡路里";
+"eCalValue" = "0 千卡";
+"eCalValue2" = "千卡";
+
+"step" = "步数";
+"stepValue" = "0 步伐";
+"stepValue2" = "步伐";
+
+"temperature" = "皮肤温度";
+"temperatureValue" = "- 摄氏度";
+"temperatureValue2" = "摄氏度";
+
+"distance" = "步长";
+"distanceM" = "距离（米）";
+"distanceValue" = "0.000 公里";
+"distanceValue2" = "公里";
+"distanceValue3" = "0 公里";
+"distanceM2" = "米";
+
+"home_maxBpm" = "最大";
+"home_minBpm" = "最小";
+"home_avgBpm" = "平均";
+"home_hrv" = "心率变";
+"home_hrv_unit" = "毫秒";
+
+// <!--    summary    -->
+"summaryBpm" = "心率";
+"summaryBpm_low" = "心率";
+"summaryArr" = "异常脉搏";
+"summaryCal" = "卡路里";
+"summaryStep" = "步伐";
+"summaryHRV" = "心率变异性";
+
+"today" = "今天";
+"twoDays" = "2 天";
+"threeDays" = "3 天";
+
+// <!--    summaryArr    -->
+"arrTimes" = "异常脉搏 (次/天)";
+
+// <!--    summaryCal    -->
+"summaryTCal" = "总热量（千卡)";
+"summaryECal" = "运动消耗卡路里（千卡)";
+"tCalTitle" = "总热量";
+"eCalTitle" = "运动消耗卡路里";
+
+// <!--    summaryHRV    -->
+"avgHRV" = "平均的";
+
+// <!--    summaryBPM    -->
+"avgBPM" = "平均的";
+
+// <!--    auth    -->
+"enterInfo" = "请输入您的个人信息。";
+"findIDResult" = "查找 ID 结果";
+"failedPW" = "未找到密码";
+"noEnteredID" = "您还没有输入您的电子邮件地址。";
+"emailNotExist" = "该电子邮件不存在。请重新输入您的电子邮件。";
+"passwordComp" = "密码修改完成";
+"reconfirmPW" = "请再次检查您的密码。";
+"search" = "寻找";
+"registeredEmailInfo" = "请输入您注册的电子邮件地址。";
+"sendCertification" = "验证码已发送";
+"CertificationInfo" = "请输入发送到您的电子邮件的验证号码。";
+"CertificationTitle" = "验证码";
+"newPwInfo" = "现在是更新您的密码以保护账户安全的时候了。";
+"findID" = "找回账号";
+"findPW" = "密码查找";
+"search" = "寻找";
+
+// <!--    Fragment    -->
+"fragment_day" = "天";
+"fragment_week" = "星期";
+"fragment_month" = "月";
+"fragment_year" = "年";
+"fragment_bpm" = "心率";
+
+// <!--    ArrFragment    -->
+"againLater" = "请稍后再试。";
+"arrState" = "状态 :";
+"arrType" = "种类 :";
+
+"typeArr" = "异常脉搏";
+"typeFastArr" = "心率偏高";
+"typeSlowArr" = "心率偏低";
+"typeHeavyArr" = "心律不齐";
+
+"type_Rest" = "休息";
+"type_Exercise" = "活动";
+"type_Sleep" = "睡眠";
+
+// <!--    ProfileFragment    -->
+"logout" = "退出";
+"logoutHelp" = "确定退出吗？";
+"rejectLogout" = "否";
+"sir" = "";
+"basic" = "基本信息";
+"target" = "目标量";
+"setting" = "设定";
+"ChangePw" = "修改密码";
+
+//<!--    profile1    -->
+"age" = "年龄";
+"saveData" = "已保存。";
+"failSaveData" = "保存失败";
+"profile_save" = "保存";
+"profile_sleep" = "就寝时间";
+"profile_wakeup" = "起床时间";
+"profile_phone" = "手机号码(不含'-')";
+"profile_HelpInfo1" = "您输入的个人信息";
+"profile_HelpInfo2" = "将加密处理，保证信息安全";
+
+// <!--    profile2    -->
+"profile2_HelpInfo1" = "设置适合自己的标准，";
+"profile2_HelpInfo2" = "完成每天健康目标";
+"profile2_bpm" = "运动后标准bpm ";
+"profile2_bpmInfo" = "成人运动bpm平均值为90次/分";
+"profile2_steps" = "每日目标步数";
+"profile2_distance" = "距离";
+"profile2_tCal" = "每天目标消耗卡路里";
+"profile2_aCal" = "运动消耗卡路里";
+
+// <!--    profile3    -->
+"profile3_title" = "应用通知设置";
+"profile3_emergency" = "紧急报警";
+"profile3_myo" = "肌电图";
+"profile3_nonContact" = "电极脱落";
+"profile3_guardianTitle" = "监护人警报";
+"profile3_guardianNoti" = "通知监护人功能";
+
+"profile3_arrInfo1" = "脉搏异常超过上限值，";
+"profile3_arrInfo2" = "向监护人发送通知消息。";
+"profile3_arrNumber" = "发出通知标准次数";
+"profile3_time" = "次";
+"profile3_guardianNumber1" = "监护人联系方式1（不含‘-’）";
+"profile3_guardianNumber2" = "监护人联系方式2（不含‘-’）";
+
+"profile3_on" = "使用";
+"profile3_off" = "关闭";
+
+// <!--    guardian    -->
+"guardian" = "保护者";
+"setGuardianComp" = "完成监护人设置";
+"setGuardianFail" = "设置监护人失败";
+"setupGuardian" = "监护人设置";
+"setupGuardianTxt" = "请准确输入您的手机号码";
+"nextGuardianPhone" = "下次";
+
+// <!--    HOME Fragment    -->
+"exit" = "确定关闭吗？?";
+"exit2" = "关闭";
+"notSupportBle" = "蓝牙不支持的设备";
+
+// <!--    NOTIFICATION    -->
+"notiTypeArr" = "检测到心律不规则!";
+"notiTypeFastArr" = "检测到心率偏高!";
+"notiTypeSlowArr" = "检测到心率偏低!";
+"notiTypeHeavyArr" = "检测到心律不齐!";
+
+"notiTypeMyo" = "检测到肌电图!";
+"notiTypeNonContact" = "检测到电极脱落!";
+
+"notiTime" = "时间 :";
+
+"totalArr" = "异常脉搏(总计)";
+"hourlyArr" = "异常脉搏(每小时)";
+
+
+
+
+// Arr Noti Title & Body
+"noti_totalArrTitle" = "今天发生了异常心率 %d次！";
+"noti_hourlyArrTitle" = "每小时发生了异常心率 %d次！";
+
+"noti_arrBody1" = "为了让您的心找到平静，\n请暂停片刻，休息一下。";
+"noti_arrBody2" = "每天的小休息是\n提高生活质量的关键。";
+"noti_arrBody3" = "即使在忙碌的生活中，\n短暂的休息也可以带来巨大的变化。";
+"noti_arrBody4" = "释放压力，\n让您的心充满平和。";
+"noti_arrBody5" = "怎么样考虑短暂休息一下呢？";
+"noti_arrBody6" = "小憩是巨大的力量来源。";
+"noti_arrBody7" = "花一点时间放松一下。";
+"noti_arrBody8" = "休息不是浪费时间。\n这是对自己最大的投资。";
+
+
+
+// Arr Alert Title & Body
+"alert_totalArrTitle" = "今天有%d次异常心率发生！\n";
+"alert_hourlyArrTitle" = "在过去的一小时内，有%d次异常心率发生！\n";
+
+"alert_arrBody1" = "有时，什么也不做\n就是最大的贡献。\n请花一点时间放松。";
+"alert_arrBody2" = "在忙碌的一天中，短暂的休息可以是一个很棒的礼物。\n请站起来伸展一下。";
+"alert_arrBody3" = "暂停一会儿深呼吸并环顾四周。\n短暂的休息可以成为巨大的力量来源。";
+"alert_arrBody4" = "短暂的休息可以极大地为你的心灵充电。";
+"alert_arrBody5" = "把一切都放在一边，\n今天给自己一些休息时间。";
+"alert_arrBody6" = "你也有权利休息。\n今天给自己一些时间。";
+"alert_arrBody7" = "你的心灵也需要休息。\n暂停一会儿，倾听你的内心声音。";
+"alert_arrBody8" = "持续的热情是值得赞赏的，但\n有时，休息一下\n是必要的。";
+
+
+
+
+
+// <!--    emergency    -->
+"emergency" = "紧急状况";
+"sendEmergencyAlert" = "通知发送成功";
+"failureEmergency" = "通知发送失败";
+"emergencyTxt" = "如果您不按下面的按钮，则会向监护人发送通知。";
+"emergencyNotiText" = "如果您不按按钮，将向监护人发送通知。";
+"noGuardianSet" = "没有设置监护人。";
+"guardianSeverErr" = "未能发送监护人通知";
+
+// <!--    battery    -->
+"setBatTitle" = "需要禁用电池优化";
+"setBatMessage" = "此应用程序需要禁用电池优化才能正常运行。按“确定”继续。";
+
+// <!--    Foreground Service    -->
+"serviceRunning" = "运行中";
+
+// <!--    Permission    -->
+"permissionToast" = "权限未设置，部分功能受限。";
+"requiredPermission" = "需要许可";
+"requiredPermissionList" = "需要蓝牙连接所需的必要权限。 必要权限：附近设备，位置";
+"goToSettings" = "前往设置";
+"locationPermission" = "位置权限";
+"locationPermissionMessage" = "APP关闭或不使用时，LOOKHEART也获取位置信息，发送紧急通知。请开启始终允许位置权限。 ";
+
+
+// <!--    Day of the week    -->
+"Monday" = "周一";
+"Tuesday" = "周二";
+"Wednesday" = "周三";
+"Thursday" = "周四";
+"Friday" = "周五";
+"Saturday" = "周六";
+"Sunday" = "周日";
+
+// <!--    bottom menu    -->
+"bottomHome" = "首页";
+"bottomSummary" = "图表";
+"bottomArr" = "异常脉搏";
+"bottomProfile" = "个人资料";
+
+// <!--    Exercise    -->
+"startExercise" = "开始锻炼";
+"endExercise" = "结束锻炼";
+"notiStartExercise" = "想要开始锻炼？";
+"notiEndExercise" = "想要结束锻炼？";
+"exerciseTime" = "时间";
+"exerciseDistance" = "距離";
+
+"functionMessage" = "功能正在准备中。";
+"noData" = "无数据";
+
+
+
+
+// <!--   Auth PhoneNumber    -->
+"requestVerification" = "请求验证";
+"failVerification" = "认证失败";
+"enterMobilePhone" = "输入手机号码";
+"enterVerificationCode" = "输入验证码";
+"validPhoneNumber" = "请输入有效的手机号码";
+"exceededNumber" = "超过验证码请求次数";
+"exceededTime" = "验证码请求超时";
+"requestsRemaining" = "验证码已发送。\n还剩%d次请求。";
+"againMoment" = "请稍后再试";
+"resendText" = "重新发送";
+"correctVerification" = "请输入正确的验证码";
+"identityVerification" = "身份验证";
+"helpAuthText" = "这是使用服务的身份验证过程。\n请继续进行验证。";
+"threeMinutesHelpText" = "◦ 请在3分钟内输入验证码。";
+"resendAuthNumber" = "◦ 如果验证码未发送，请按重新发送按钮。";
+"verify" = "身份验证";
+
+// <!--   Find Id / Pw    -->
+"findHelpText" = "请填写必要的信息进行身份验证。";
+"unableFindId" = "无法找到账号。";
+
+// <!--   Account Deletion   -->
+"AccountDeletion" = "会员退出";
+"DeletionText" = "退出LOOKHEART前,\n请检查以下信息。";
+
+
+// <!--   Server Task   -->
+"serverError" = "请稍后再试。";
+"serverInternetError" = "请检查您的网络连接。";
+"updateApp" = "需要更新应用。\n您想要在应用商店中更新吗？";

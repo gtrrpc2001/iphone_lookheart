@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'LOOKHEART 100' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LOOKHEART 100
+
+pod 'DGCharts'
+pod "TinyConstraints"
+pod 'SnapKit'
+pod 'Then'
+pod 'Alamofire'
+pod 'Toast-Swift', '~> 5.0.1'
+pod 'CryptoSwift'
+pod 'KeychainSwift'
+pod 'Firebase/Auth'
+pod 'DatePickerDialog'
+end

@@ -1,0 +1,390 @@
+"title_activity_login" = "LOOKHEART";
+"titleText" = "LOOKHEART";
+"joinDate" = "Join Date";
+"loginLabel" = "Log in";
+"loginText" = "Welcome to the LOOKHEART service.\nEnter your registered ID and password.";
+"email_Label" = "E-mail";
+"email_Hint" = "Please enter your email";
+"password_Label" = "Password";
+"password_Hint" = "Please enter a password";
+"autoLogin" = "Auto-Login";
+"findEmailPassword" = "Find ID/PW";
+"signupHelpText" = "Is this your first time using LOOKHEART?";
+"signupButton" = "Sign up";
+
+"idAndPwHelp" = "Enter your email/password";
+"loginSuccess" = "Login Success!";
+"duplicateLogin" = "You are being logged in from another location. \nPlease log out of the existing ID and log in again.";
+"loginFailed" = "Login Failed";
+"incorrectlyLogin" = "You entered your email or password incorrectly";
+"userDataComplete" = "We have received the user data.";
+"serverErr" = "The server failed to verify the data.";
+"noti" = "Notification";
+"notAgree" = "did not agree";
+"reject" = "Cancle";
+
+// <!--    SignUp first    -->
+"signup1" = "Sign up 1/4";
+"agree" = "Agree";
+"back" = "Go back";
+"next" = "Next";
+
+// <!--    SignUp Second    -->
+"signup2" = "Sign up 2/4";
+
+// <!--    SignUp third    -->x
+"signup3" = "Sign up 3/4";
+"id_guide" = "Please enter the actual email you are using.";
+"id_Label" = "Enter ID(E-mail)";
+"num_Label" = "Certification Number";
+"check_Label" = "Check";
+"ok" = "OK";
+"pw_Label" = "Enter Password";
+"rpw_Label" = "Re-enter password";
+"rpw_Label_hint" = "Please re-enter your password.";
+"emailHelp" = "Please enter a valid email";
+"passwordHelp" = "Password of at least 10 characters including uppercase letters, lowercase letters, numbers, and special characters";
+"passwordHelp2" = "* Min 10 chars with upper/lower case, numbers, and symbols.";
+"reEnterPasswordHelp" = "Passwords do not match";
+"authSuccess" = "Authentication success";
+"dupID" = "This email already exists..\nPlease enter a new email again.";
+"checkEmail" = "Please check your email format.";
+"sendVerification" = "Send a Certification number";
+"confirmVerification" = "Please confirm your Certification number again";
+
+"authEmail" = "Verify";
+"resendEmail" = "Resend";
+"authComplete" = "Verify Completed";
+
+// <!--    SignUp fourth    -->
+"signup4" = "Sign up 4/4";
+"name_Label" = "Name";
+
+"firstname" = "First Name";
+"firstnameHelp" = "Enter First Name";
+"lastname" = "Last Name";
+"lastnameHelp" = "Enter Last Name";
+
+"height_Label" = "Height(cm)";
+"height" = "Height";
+"weight_Label" = "Weight(kg)";
+"weight" = "Weight";
+"birthday_Label" = "Birth Date";
+"gender" = "gender";
+"male_Label" = "Male";
+"female_Label" = "Female";
+"signup_complete" = "Sign up completed";
+"nameHelp" = "Please enter the correct name";
+"heightHelp" = "Please enter correct height";
+"weightHelp" = "Please enter your correct weight";
+"formatted_date" = "%1$dyear %2$dmonth %3$dday";
+"enterAgain" = "\nPlease enter again";
+"physicalenterAgain" = "Please re-enter your physical information.";
+
+"nameHintText" = "Please enter a name";
+"heightHintText" = "Please enter your height";
+"weightHintText" = "Please enter your weight";
+"phoneHintText" = "Please enter the correct mobile phone number.";
+"phoneHintText2" = "Please enter your mobile number.";
+"phoneHintText3" = "mobile number";
+"numberHintText" = "Please enter the correct number.";
+"birthdayHelp" = "Please select your exact date of birth.";
+
+"returnLogin" = "Return to the login page";
+"update" = "Your iPhone needs to be updated";
+
+// <!--    Home    -->
+"rest" = "R";
+"exercise" = "A";
+"sleep" = "S";
+"arr" = "I.H.R.";
+
+"eCal" = "Activity calories";
+"homeECal" = "Activity cal";
+"eCalValue" = "0 kcal";
+"eCalValue2" = "kcal";
+
+"step" = "Steps";
+"stepValue" = "0 step";
+"stepValue2" = "step";
+
+"temperature" = "Skin temp";
+"temperatureValue" = "- °C";
+"temperatureValue2" = "°C";
+
+"distance" = "Distance";
+"distanceM" = "Distance (m)";
+"distanceValue" = "0.000 km";
+"distanceValue2" = "km";
+"distanceValue3" = "0 km";
+"distanceM2" = "m";
+
+"home_maxBpm" = "Max";
+"home_minBpm" = "Min";
+"home_avgBpm" = "Avg";
+"home_hrv" = "HRV";
+"home_hrv_unit" = "ms";
+
+// <!--    summary    -->
+"summaryBpm" = "Bpm";
+"summaryBpm_low" = "bpm";
+"summaryArr" = "I.H.R.";
+"summaryCal" = "Calorie";
+"summaryStep" = "Step";
+"summaryHRV" = "HRV";
+
+"today" = "Today";
+"twoDays" = "2 Days";
+"threeDays" = "3 Days";
+
+// <!--    summaryArr    -->
+"arrTimes" = "I.H.R.\n(times/Day)";
+
+// <!--    summaryCal    -->
+"summaryTCal" = "Total calories (kcal)";
+"summaryECal" = "Activity calories (kcal)";
+"tCalTitle" = "Total calories";
+"eCalTitle" = "Activity calories";
+
+// <!--    summaryHRV    -->
+"avgHRV" = "Average";
+
+// <!--    summaryBPM    -->
+"avgBPM" = "Average";
+
+// <!--    auth    -->
+"enterInfo" = "Please enter your personal information.";
+"findIDResult" = "Find ID results";
+"failedPW" = "Failed to find password";
+"noEnteredID" = "No email is entered.";
+"emailNotExist" = "Email does not exist.\nPlease enter your email again.";
+"passwordComp" = "Password change complete";
+"reconfirmPW" = "Please reconfirm your password.";
+"search" = "Search";
+"registeredEmailInfo" = "Please enter your registered email.";
+"sendCertification" = "Send Certification number";
+"CertificationInfo" = "Enter the Certification number sent in the email.";
+"CertificationTitle" = "Certification number";
+"newPwInfo" = "It's time to update your password for account security.";
+"findID" = "Find ID";
+"findPW" = "Find Password";
+"search" = "Search";
+
+// <!--    Fragment    -->
+"fragment_day" = "Day";
+"fragment_week" = "Week";
+"fragment_month" = "Month";
+"fragment_year" = "Year";
+"fragment_bpm" = "BPM";
+
+// <!--    ArrFragment    -->
+"againLater" = "Please try again later.";
+
+"arrState" = "Status :";
+"arrType" = "Type :";
+
+"typeArr" = "I.H.R.";
+"typeFastArr" = "Fast heart rhythm";
+"typeSlowArr" = "Slow heart rhythm";
+"typeHeavyArr" = "Heavy I.H.R.";
+
+"type_Rest" = "rest";
+"type_Exercise" = "activity";
+"type_Sleep" = "sleep";
+
+// <!--    ProfileFragment    -->
+"logout" = "LOGOUT";
+"logoutHelp" = "Do you want to log out?";
+"rejectLogout" = "Cancel";
+"sir" = "";
+"basic" = "Profile";
+"target" = "Target";
+"setting" = "Setting";
+"ChangePw" = "Change Pw";
+
+//<!--    profile1    -->
+"age" = "age";
+"saveData" = "Saved";
+"failSaveData" = "Failed to save data";
+"profile_save" = "Save";
+"profile_sleep" = "Bed time";
+"profile_wakeup" = "Wake up time";
+"profile_phone" = "Phone Number(excluding '-')";
+"profile_HelpInfo1" = "All personal information";
+"profile_HelpInfo2" = "you enter is encrypted and safely managed.";
+
+// <!--    profile2    -->
+"profile2_HelpInfo1" = "Set standards that are right for you,";
+"profile2_HelpInfo2" = "and achieve your daily health goals.";
+"profile2_bpm" = "Activity-based bpm";
+"profile2_bpmInfo" = "The average bpm for adult activity is 90.";
+"profile2_steps" = "Steps";
+"profile2_distance" = "Distance";
+"profile2_tCal" = "Total calorie";
+"profile2_aCal" = "Activity calorie";
+
+// <!--    profile3    -->
+"profile3_title" = "App notification settings";
+"profile3_emergency" = "Emergency alert";
+"profile3_myo" = "Myo-activity";
+"profile3_nonContact" = "Electrode detached";
+"profile3_guardianTitle" = "Guardian Notification";
+"profile3_guardianNoti" = "Guardian notification";
+
+"profile3_arrInfo1" = "When abnormal pulse occurs more than the standard number,";
+"profile3_arrInfo2" = "an Sending a notification message to the guardian.";
+"profile3_arrNumber" = "Number of I.H.R.";
+"profile3_time" = "time";
+"profile3_guardianNumber1" = "Guardian1 phone number1(excluding '-')";
+"profile3_guardianNumber2" = "Guardian1 phone number2(excluding '-')";
+
+"profile3_on" = "ON";
+"profile3_off" = "OFF";
+
+// <!--    guardian    -->
+"guardian" = "Guardian";
+"setGuardianComp" = "Finish setting up guardians";
+"setGuardianFail" = "Failed to set up a guardian";
+"setupGuardian" = "Set up guardians";
+"setupGuardianTxt" = "Please enter your cell phone number correctly";
+"nextGuardianPhone" = "next time";
+// <!--    HOME Fragment    -->
+"exit" = "Exit?";
+"exit2" = "Exit";
+"notSupportBle" = "The device does not support Bluetooth.";
+
+// <!--    NOTIFICATION    -->
+"notiTypeArr" = "I.H.R. detected!";
+"notiTypeFastArr" = "Fast heart rhythm detected!";
+"notiTypeSlowArr" = "Slow heart rhythm detected!";
+"notiTypeHeavyArr" = "Heavy I.H.R. detected!";
+
+"notiTypeMyo" = "Myo-activity detected!";
+"notiTypeNonContact" = "Electrode detached!";
+
+"notiTime" = "Time :";
+
+"totalArr" = "I.H.R.(Total)";
+"hourlyArr" = "I.H.R.(Hourly)";
+
+
+
+
+// Arr Noti Title & Body
+"noti_totalArrTitle" = "I.H.R. occurred %d times today!";
+"noti_hourlyArrTitle" = "I.H.R. occurred %d times per hour!";
+
+"noti_arrBody1" = "To find peace in your heart,\nplease take a moment to pause and rest.";
+"noti_arrBody2" = "A little rest each day is\nthe key to improving the quality of life.";
+"noti_arrBody3" = "Even in a busy life,\na small break can make a big difference.";
+"noti_arrBody4" = "Let go of stress,\nand fill your heart with peace.";
+"noti_arrBody5" = "How about taking a short break?";
+"noti_arrBody6" = "A little rest is a great source of strength.";
+"noti_arrBody7" = "Take a moment to relax.";
+"noti_arrBody8" = "Rest is not a waste of time.\nIt's the greatest investment in yourself.";
+
+
+
+// Arr Alert Title & Body
+"alert_totalArrTitle" = "Today, there were %d instances of I.H.R.!\n";
+"alert_hourlyArrTitle" = "There were %d instances of I.H.R. in the last hour!\n";
+
+"alert_arrBody1" = "Sometimes, doing nothing is\ndoing the most.\nTake a moment to relax.";
+"alert_arrBody2" = "In a busy day, a short break can be a great gift.\nTake a moment to stand up and stretch.";
+"alert_arrBody3" = "Pause for a moment to breathe\ndeeply and look around.\nA little rest can be a great\nsource of strength.";
+"alert_arrBody4" = "A brief rest can greatly recharge your mind.";
+"alert_arrBody5" = "Put everything aside for a moment,\nand gift yourself some rest today.";
+"alert_arrBody6" = "You have the right to rest too.\nTake some time for yourself today.";
+"alert_arrBody7" = "Your heart needs rest as well.\nPause for a moment and listen to your\ninner voice.";
+"alert_arrBody8" = "Constant passion is admirable, but\nsometimes, taking a break\nis necessary.";
+
+
+
+
+
+// <!--    emergency    -->
+"emergency" = "Emergency";
+
+"sendEmergencyAlert" = "Send complete";
+"failureEmergency" = "Send failed";
+
+"emergencyTxt" = "If the button below is not pressed\na notification will be sent to the guardian.";
+"emergencyNotiText" = "If you do not press the button, a notification will be sent to the guardian.";
+"noGuardianSet" = "No guardian has been set.";
+"guardianSeverErr" = "Failed to send notification to guardian";
+
+// <!--    battery    -->
+"setBatTitle" = "Requires disabling battery optimisation";
+"setBatMessage" = "This app requires battery optimisation to be disabled for normal operation.\nTap \'OK\' to continue.";
+
+// <!--    Foreground Service    -->
+"serviceRunning" = "Running";
+
+// <!--    Permission    -->
+"permissionToast" = "Not allowing all permissions\nSome features are limited";
+"requiredPermission" = "Required permissions required";
+"requiredPermissionList" = "Required permissions for Bluetooth connections.\nRequired permissions: Nearby devices, Location";
+"goToSettings" = "Go to Settings";
+"locationPermission" = "Location permission";
+"locationPermissionMessage" = "LOOKHEART\nEven when the app is closed or not in use\nBy collecting location data\nSupports emergency notification function.\nSet location permission to Always Allow\nPlease change it";
+
+
+// <!--    Day of the week    -->
+"Monday" = "MON";
+"Tuesday" = "Tue";
+"Wednesday" = "Wed";
+"Thursday" = "Thu";
+"Friday" = "Fri";
+"Saturday" = "Sat";
+"Sunday" = "Sun";
+
+// <!--    bottom menu    -->
+"bottomHome" = "home";
+"bottomSummary" = "Summary";
+"bottomArr" = "IHR";
+"bottomProfile" = "Profile";
+
+// <!--    Exercise    -->
+"startExercise" = "Start Exercise";
+"endExercise" = "End Exercise";
+"notiStartExercise" = "Do you want to start the exercise?";
+"notiEndExercise" = "Do you want to end the exercise?";
+"exerciseTime" = "Time";
+"exerciseDistance" = "Distance";
+
+"functionMessage" = "The function is under preparation";
+"noData" = "No Data";
+
+
+// <!--   Auth PhoneNumber    -->
+"requestVerification" = "Verify";
+"failVerification" = "Authentication Failed";
+"enterMobilePhone" = "Enter Mobile Phone";
+"enterVerificationCode" = "Enter Verification Code";
+"validPhoneNumber" = "Please Enter a Valid Mobile Phone Number";
+"exceededNumber" = "Exceeded Number of Verification Code Requests";
+"exceededTime" = "Verification Code Request Timeout";
+"requestsRemaining" = "The verification code has been sent.\n%d requests remaining.";
+"againMoment" = "Please Try Again in a Moment";
+"resendText" = "Resend";
+"correctVerification" = "Please Enter the Correct Verification Code";
+"identityVerification" = "Identity Verification";
+"helpAuthText" = "Please complete identity verification\nto use the service.";
+"threeMinutesHelpText" = "◦ Enter the code within 3 minutes.";
+"resendAuthNumber" = "◦ No code? Press resend.";
+"verify" = "Verify";
+
+// <!--   Find Id / Pw    -->
+"findHelpText" = "Please enter the required information for identity verification.";
+"unableFindId" = "Unable to find the ID";
+
+// <!--   Account Deletion   -->
+"AccountDeletion" = "Account Deletion";
+"DeletionText" = "Before leaving LOOKHEART,\nplease check the information below.";
+
+
+// <!--   Server Task   -->
+"serverError" = "Please try again later.";
+"serverInternetError" = "Please check your internet connection.";
+"updateApp" = "An app update is required.\nWould you like to update it in the App Store?";
+
