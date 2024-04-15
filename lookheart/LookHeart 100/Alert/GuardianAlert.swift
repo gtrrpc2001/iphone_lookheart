@@ -106,27 +106,30 @@ class GuardianAlert: UIViewController {
     
     private func setGuardian(_ guardian: [String]){
         
-        
-        NetworkManager.shared.setGuardianToServer(phone: guardian) { [self] result in
-            switch result {
-            case .success(let isSuccess):
-                if isSuccess {
-                    ToastHelper.shared.showToast(
-                        view, "setGuardianComp".localized(),
-                        withDuration: 0.5, delay: 0.5, bottomPosition: false)
-                } else {
-                    ToastHelper.shared.showToast(
-                        view, "setGuardianFail".localized(),
-                        withDuration: 0.5, delay: 0.5, bottomPosition: false)
-                    
-                }
+        Task {
+            let response = await ProfileService.shared.postGuardian(phone: guardian)
+            
+            switch response {
+            case .success:
+                ToastHelper.shared.showToast(
+                    view, "setGuardianComp".localized(),
+                    withDuration: 0.5, delay: 0.5, bottomPosition: false
+                )
+                
                 alertDismiss()
-            case .failure(let error):
+            case .failer:
                 ToastHelper.shared.showToast(
                     view, "setGuardianFail".localized(),
-                    withDuration: 0.5, delay: 0.5, bottomPosition: false)
+                    withDuration: 0.5, delay: 0.5, bottomPosition: false
+                )
+                
                 alertDismiss()
-                print("setGuardian 네트워크 요청 실패했습니다: \(error)")
+            default:
+                ToastHelper.shared.showToast(
+                    view, "setGuardianFail".localized(),
+                    withDuration: 0.5, delay: 0.5, bottomPosition: false
+                )
+                alertDismiss()
             }
         }
     }

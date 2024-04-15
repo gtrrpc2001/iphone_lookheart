@@ -13,6 +13,8 @@
 "signupButton" = "注册会员";
 
 "idAndPwHelp" = "请输入您的电子邮件地址/密码";
+"correctIdPwHelp" = "请输入正确的电子邮件和密码。";
+
 "loginSuccess" = "登录完成";
 "duplicateLogin" = "您正在其他地方登录。\n请登出现有账号后重新登录。";
 "loginFailed" = "登录失败";
@@ -60,9 +62,9 @@
 "signup4" = "注册会员 4/4";
 "name_Label" = "姓名";
 
-"firstname" = "姓";
+"firstname" = "名字";
 "firstnameHelp" = "请输入姓。";
-"lastname" = "名";
+"lastname" = "姓";
 "lastnameHelp" = "请输入名字。";
 
 "height_Label" = "身高(厘米)";
@@ -382,8 +384,30 @@
 "AccountDeletion" = "会员退出";
 "DeletionText" = "退出LOOKHEART前,\n请检查以下信息。";
 
+"privacyText" = "个人信息及销毁";
+"privacyHelpText" = "您的个人信息将根据MSL有限公司的隐私政策处理。\n根据法律规定的期限保留个人信息之后，\n将立即销毁。";
+
+"serviceLogText" = "服务使用记录";
+"serviceLogHelpText" = "如果法律规定需要保留（如交易记录等），\n则该信息将按照法律规定的期限保留。\n这仅适用于需要保留服务使用记录的情况。";
+
+"reSignupText" = "重新注册";
+"reSignupHelpText" = "即使在注销会员后重新注册，\n注销前的会员信息、交易信息等也将不会被恢复。";
+
+"notesText" = "您可以在LOOKHEART隐私政策中\n查看更多详情。";
+"AccountDeletionAgreeText" = "我已经仔细阅读所有注意事项，并同意所有适用条款。";
+
+"AccountDeletionAgree" = "同意全部";
+
+"mismatchesPhoneNumber" = "手机号码不匹配。";
+"accountDeletionText" = "您确定要退出吗？";
 
 // <!--   Server Task   -->
 "serverError" = "请稍后再试。";
 "serverInternetError" = "请检查您的网络连接。";
 "updateApp" = "需要更新应用。\n您想要在应用商店中更新吗？";
+
+"dupPhoneNumber" ="该号码已存在ID。";
+
+
+
+"nonNetworkHelpText" ="需要互联网连接。\n您是否想要在没有连接的情况下使用有限的功能？";

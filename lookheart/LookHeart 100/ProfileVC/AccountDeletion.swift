@@ -26,9 +26,9 @@ class AccountDeletion : TitleViewController, AuthDelegate {
     
     
     // MARK: -
-    func complete(phoneNumber: String) {
+    func complete(result: String) {
         
-        phone = phoneNumber
+        phone = result
         
         isHidden(false, true)
         
@@ -92,15 +92,19 @@ class AccountDeletion : TitleViewController, AuthDelegate {
     }
     
     private func deleteAccount() {
-        NetworkManager.shared.accountDeletion(parameters: setUserParam()) { result in
-            switch result {
-            case .success(let deletion):
-                if deletion {
-                    self.completeDeletionAccount()
-                }
-            case .failure(let error):
-                print("deleteAccount : \(error)")
+        
+        Task {
+            let response = await ProfileService.shared.postAccountDeletion(params: setUserParam())
+            
+            switch response {
+            case .success:
+                await ProfileService.shared.postUpdateLogout()
+                await LogService.shared.sendLog(userType: .User, action: .AccountDeletion)
+                
+                completeDeletionAccount()
+            default:
                 propAlert.basicAlert(title: "noti".localized(), message: "serverError".localized(), ok: "ok".localized(), viewController: self)
+                
             }
         }
     }
@@ -116,10 +120,6 @@ class AccountDeletion : TitleViewController, AuthDelegate {
         
         // AutoLogin Flag
         defaults.set(false, forKey: "autoLoginFlag")
-        
-        // Send Logout Log
-        NetworkManager.shared.sendLog(id: propEmail, userType: .User, action: .AccountDeletion)
-        NetworkManager.shared.updateLogoutFlag()
         
         view.window?.rootViewController = LoginVC()
         view.window?.rootViewController?.dismiss(animated: true)

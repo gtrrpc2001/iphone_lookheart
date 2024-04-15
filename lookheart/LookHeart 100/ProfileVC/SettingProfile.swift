@@ -99,9 +99,11 @@ class SettingProfile: UIView {
         // AutoLogin Flag
         defaults.set(false, forKey: "autoLoginFlag")
                 
-        // Send Logout Log
-        NetworkManager.shared.sendLog(id: propEmail, userType: .User, action: .Logout)
-        NetworkManager.shared.updateLogoutFlag()
+        // Send Logout Log & Update Flag
+        Task {
+            await LogService.shared.sendLog(userType: .User, action: .Logout)
+            await ProfileService.shared.postUpdateLogout()
+        }
         
         // BLE Disconnect
         BluetoothManager.shared.disconnectBLEDevice()

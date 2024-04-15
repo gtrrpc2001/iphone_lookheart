@@ -300,7 +300,6 @@ class TargetProfile: UIView, UITextFieldDelegate {
     }
     
     func saveUserData(){
-
         let userData: [String: Any] = [
             "kind": "setProfile",
             "eq": propEmail,
@@ -323,15 +322,14 @@ class TargetProfile: UIView, UITextFieldDelegate {
             "differtime": "1"
         ]
         
-        NetworkManager.shared.signupToServer(parameters: userData) { [self] result in
-            switch result {
-            case .success(let isAvailable):
-                if isAvailable {
-                    showAlert(title: "saveData".localized(), message: nil)
-                }
-            case .failure(let error):
+        Task {
+            let response = await ProfileService.shared.postSignup(params: userData)
+            
+            switch response {
+            case .success:
+                showAlert(title: "saveData".localized(), message: nil)
+            default:
                 showAlert(title: "failSaveData".localized(), message: nil)
-                print("Error: \(error.localizedDescription)")
             }
         }
     }

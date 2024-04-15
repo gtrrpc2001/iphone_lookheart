@@ -13,6 +13,8 @@
 "signupButton" = "회원가입";
 
 "idAndPwHelp" = "이메일과 비밀번호를 입력하세요";
+"correctIdPwHelp" = "정확한 이메일과 비밀번호를 입력하세요";
+
 "loginSuccess" = "로그인 성공!";
 "loginFailed" = "로그인 실패";
 "incorrectlyLogin" = "이메일 또는 비밀번호를 잘못 입력했습니다.";
@@ -56,9 +58,9 @@
 "signup4" = "회원가입 4/4";
 "name_Label" = "이름";
 "firstname" = "이름";
-"firstnameHelp" = "성을 입력하세요";
+"firstnameHelp" = "이름을 입력하세요";
 "lastname" = "성";
-"lastnameHelp" = "이름을 입력하세요";
+"lastnameHelp" = "성을 입력하세요";
 "height_Label" = "신장(cm)";
 "height" = "신장";
 "weight_Label" = "몸무게(kg)";
@@ -296,8 +298,8 @@
 
 // <!--    emergency    -->
 "emergency" = "응급 상황";
-"successEmergency" = "알림 전송 완료";
-"failureEmergency" = "알림 전송 실패";
+"sendEmergencyAlert" = "전송 완료";
+"failureEmergency" = "전송 실패";
 "emergencyTxt" = "아래 버튼을 누르지 않으면\n보호자에게 알림이 전송됩니다.";
 "emergencyNotiText" = "버튼을 누르지 않으면 보호자에게 알림이 전송됩니다.";
 "noGuardianSet" = "설정된 보호자가 없습니다.";
@@ -407,3 +409,11 @@
 "serverError" = "잠시 후 다시 시도해주세요";
 "serverInternetError" = "인터넷 연결을 확인해주세요";
 "updateApp" = "앱 업데이트가 필요합니다.\n앱 스토어에서 업데이트를 하시겠습니까?";
+
+
+"dupPhoneNumber" = "아이디가 존재하는 번호입니다.";
+
+
+
+
+"nonNetworkHelpText" ="인터넷 연결이 필요합니다.\n연결 없이 제한된 기능만 사용하시겠습니까?";

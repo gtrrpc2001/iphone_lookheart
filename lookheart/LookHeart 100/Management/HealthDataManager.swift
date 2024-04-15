@@ -19,7 +19,7 @@ public class HealthDataManager {
         var bpm: Int = 0
         var minBpm: Int = 70
         var maxBpm: Int = 0
-        var avgBom: Int = 0
+        var avgBpm: Int = 0
         
         var arrCnt: Int = 0
         var hrv: Int = 0
@@ -86,8 +86,7 @@ public class HealthDataManager {
             
         } else {
             
-            resetHealthData()
-            setUserDefaultData()
+            resetDefaultHealthData()
             
             defaults.set(propCurrentDate, forKey: "\(propEmail)\(PrevDateKey)")
             
@@ -95,9 +94,14 @@ public class HealthDataManager {
                         
         }
     }
-    
+
     public func resetHealthData() {
         healthData.reset()
+    }
+    
+    public func resetDefaultHealthData() {
+        healthData.reset()
+        setUserDefaultData()
     }
     
     public func setGender(_ gender: Bool) {
@@ -139,7 +143,7 @@ public class HealthDataManager {
         set {
             healthData.bpm = newValue
             tenSecondData.bpm = newValue
-            calcMinMax(bpm)
+            calcMinMax(newValue)
         }
     }
     
@@ -163,10 +167,10 @@ public class HealthDataManager {
     
     public var avgBpm: Int {
         get {
-            return healthData.avgBom
+            return healthData.avgBpm
         }
         set {
-            healthData.avgBom = newValue
+            healthData.avgBpm = newValue
         }
     }
         
@@ -279,7 +283,6 @@ public class HealthDataManager {
     
     // MARK: -
     public func calculateHealthData() {
-        
         calculateCalorie()
         calculateDistance()
         
@@ -399,22 +402,16 @@ public class HealthDataManager {
     
     public func resetExercise() {
         exerciseFlag = false
-        exerciseCnt = 0
         exerciseCal = 0.0
         exerciseStep = 0
         exerciseDistance = 0.0
     }
     
-    public func getExerciseData() -> (Int, Double, Int, Double) {
+    public func getExerciseData() -> (Double, Int, Double) {
         let calorie = healthData.activityCalorie - exerciseCal
         let step = healthData.step - exerciseStep
         let distance = healthData.distance - exerciseDistance
-        return (exerciseCnt, calorie, step, distance)
-    }
-    
-    public func exerciseTimer() {
-        if !exerciseFlag {  return  }
-        exerciseCnt += 1
+        return (calorie, step, distance)
     }
     
     public func getExerciseFlag() -> Bool {

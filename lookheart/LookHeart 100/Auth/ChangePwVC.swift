@@ -53,21 +53,16 @@ class ChangePwVC : TitleViewController, UITextFieldDelegate {
     }
     
     private func updatePassword() {
-        
-        
-        NetworkManager.shared.updatePassword(id: id!, password: password) { [self] result in
-            switch result {
-            case .success(let result):
-                
-                if result {
-                    updatePasswordAlert()
-                } else {
-                    showAlert("failSaveData".localized())
-                }
-                
-            case .failure(let error):
+        Task {
+            let response = await ProfileService.shared.postUpdatePassword(id: id!, password: password)
+            
+            switch response {
+            case .success:
+                updatePasswordAlert()
+            case .failer:
+                showAlert("failSaveData".localized())
+            default:
                 showAlert("serverErr".localized())
-                print("updatePassword Error: \(error)")
             }
         }
     }

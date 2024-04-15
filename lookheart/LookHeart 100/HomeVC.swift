@@ -11,7 +11,6 @@ import LookheartPackage
 import UserNotifications
 import DGCharts
 
-// pkhpkh921@naver.com
 let defaults = UserDefaults.standard
 
 var connectionFlag = false // BLE Connection Flag
@@ -26,11 +25,13 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
     private var bluetoothManager: BluetoothManager?
     private var dataEntries = [ChartDataEntry](repeating: ChartDataEntry(x: 0.0, y: 512.0), count: 500)
     private var ecgPeakFlag = 0 // 파형 변환 변수
+    
     private var exerciseFlag = false
+    private var exerciseTimer: Timer?
+    private var exerciseCount = 0
     
     // MARK: -
     private var chartView: LineChartView?
-    private var bpmHrvChartView: LineChartView?
     
     private var arrCntLabel: UILabel?
     
@@ -66,17 +67,17 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
     
     @objc func buttonPEAK(_ sender: Any) {
         
-        ecgPeakFlag += 1
-        if ecgPeakFlag == 2 {
-            if conversionFlag {
-                conversionFlag = false
-            } else{
-                conversionFlag = true
-            }
-            propProfil.conversionFlag = conversionFlag
-            ecgPeakFlag = 0
-            ToastHelper.shared.showToast(view, "Change MODE", withDuration: 1.0, delay: 1.0, bottomPosition: true)
-        }
+//        ecgPeakFlag += 1
+//        if ecgPeakFlag == 2 {
+//            if conversionFlag {
+//                conversionFlag = false
+//            } else{
+//                conversionFlag = true
+//            }
+//            propProfil.conversionFlag = conversionFlag
+//            ecgPeakFlag = 0
+//            ToastHelper.shared.showToast(view, "Change MODE", withDuration: 1.0, delay: 1.0, bottomPosition: true)
+//        }
     }
         
     // MARK: - viewDidLoad
@@ -198,10 +199,9 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
     private func updateExerciseUI() {
         let exerciseData = HealthDataManager.shared.getExerciseData()
         if let exStackView = exStackView {
-            updateValue(stackView: exStackView, text: setTime(exerciseData.0), tag: ExTime)
-            updateValue(stackView: exStackView, text: String(Int(exerciseData.1)), tag: ExCal)
-            updateValue(stackView: exStackView, text: String(exerciseData.2), tag: ExStep)
-            updateValue(stackView: exStackView, text: String(format: "%.3f", exerciseData.3 / 100 / 1000.0), tag: ExDistance)
+            updateValue(stackView: exStackView, text: String(Int(exerciseData.0)), tag: ExCal)
+            updateValue(stackView: exStackView, text: String(exerciseData.1), tag: ExStep)
+            updateValue(stackView: exStackView, text: String(format: "%.3f", exerciseData.2 / 100 / 1000.0), tag: ExDistance)
         }
     }
     
@@ -211,8 +211,68 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
         }
     }
     
-    private func setTime(_ cnt: Int) -> String {
+    private func setExerciseColor(_ flag: Bool) {
+        tagLabel!.text = flag ? "E" : "B"
+        tagLabel!.backgroundColor = flag ? UIColor.MY_BLUE : UIColor.MY_RED
+        tagLabel!.layer.borderColor = flag ? UIColor.MY_BLUE.cgColor : UIColor.MY_RED.cgColor
+    }
+    
+    private func showExerciseAlert(message: String?) {
+        let alert = UIAlertController(title: "noti".localized(), message: message, preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "ok".localized(), style: .destructive, handler: { [self] Action in
+            if !exerciseFlag {
+                startExercise()
+                
+                ToastHelper.shared.showToast(view, "startExercise".localized())
+                
+            } else {
+                stopExercise()
+
+                ToastHelper.shared.showToast(view, "endExercise".localized())
+            }
+        })
         
+        let cancel = UIAlertAction(title: "reject".localized(), style: UIAlertAction.Style.cancel, handler: { Action in
+        })
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: false)
+    }
+        
+    private func startExercise() {
+        exerciseFlag = true
+        bpmViewLabel!.isHidden = exerciseFlag
+        exerciseViewLabel!.isHidden = !exerciseFlag
+        
+        HealthDataManager.shared.startExercise()
+        setExerciseColor(exerciseFlag)
+        
+        exerciseTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(exerciseTimeCount), userInfo: nil, repeats: true)
+    }
+    
+    private func stopExercise() {
+        exerciseFlag = false
+        bpmViewLabel!.isHidden = exerciseFlag
+        exerciseViewLabel!.isHidden = !exerciseFlag
+        
+        exerciseTimer?.invalidate()
+        exerciseTimer = nil
+        
+        exerciseCount = 0
+        
+        HealthDataManager.shared.resetExercise()
+        setExerciseColor(exerciseFlag)
+    }
+    
+    @objc func exerciseTimeCount() {
+        exerciseCount += 1
+        if let exStackView = exStackView {
+            updateValue(stackView: exStackView, text: setTime(exerciseCount), tag: ExTime)
+        }
+    }
+    
+    private func setTime(_ cnt: Int) -> String {
         let sec = cnt % 60
         let min = (cnt / 60) % 60 // 60으로 나눈 후 다시 60으로 나누어 나머지를 구함
         let hour = cnt / 3600
@@ -228,56 +288,21 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
         }
     }
     
-    private func setExerciseColor(_ flag: Bool) {
-        tagLabel!.text = flag ? "E" : "B"
-        tagLabel!.backgroundColor = flag ? UIColor.MY_BLUE : UIColor.MY_RED
-        tagLabel!.layer.borderColor = flag ? UIColor.MY_BLUE.cgColor : UIColor.MY_RED.cgColor
-    }
-    
-    private func showExerciseAlert(message: String?) {
-        let alert = UIAlertController(title: "noti".localized(), message: message, preferredStyle: UIAlertController.Style.alert)
-        let ok = UIAlertAction(title: "ok".localized(), style: .destructive, handler: { [self] Action in
-            if !exerciseFlag {
-                exerciseFlag = true
-                bpmViewLabel!.isHidden = exerciseFlag
-                exerciseViewLabel!.isHidden = !exerciseFlag
-                
-                HealthDataManager.shared.startExercise()
-                setExerciseColor(exerciseFlag)
-                
-                ToastHelper.shared.showToast(view, "startExercise".localized())
-                
-            } else {
-                exerciseFlag = false
-                bpmViewLabel!.isHidden = exerciseFlag
-                exerciseViewLabel!.isHidden = !exerciseFlag
-            
-                HealthDataManager.shared.resetExercise()
-                setExerciseColor(exerciseFlag)
-
-                ToastHelper.shared.showToast(view, "endExercise".localized())
-            }
-        })
-        
-        let cancel = UIAlertAction(title: "reject".localized(), style: UIAlertAction.Style.cancel, handler: { Action in
-        })
-        
-        alert.addAction(ok)
-        alert.addAction(cancel)
-        present(alert, animated: false)
-    }
-        
     //MARK: - LoadUserData
     func getUserProfile() {
     
-        let identification = Keychain.shared.getString(forKey: "email") ?? "test"
+        let identification = Keychain.shared.getString(forKey: userEmailKey) ?? "test"
         
-        NetworkManager.shared.getProfileToServer(id: identification){ [self] result in
-            switch(result) {
-            case .success(let user):
-                
+        Task {
+            
+            let getProfile = await ProfileService.shared.getProfile(id: identification)
+            let profile = getProfile.0
+            let response = getProfile.1
+            
+            switch response {
+            case .success:
                 // set Profile
-                propProfil.profile = user
+                propProfil.profile = profile!
                 propProfil.isLogin = true
                 
                 // PEAK : 0, ECG : 1
@@ -298,21 +323,22 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
                 }
                 
                 // Init Singleton
-                bluetoothManager?.initBluetoothManager()
                 TenSecondDataManager.shared.resetTenSecondData()
                 HourlyDataManager.shared.initHourlyDataManager()
                 HealthDataManager.shared.initHealthDataManager()
+                bluetoothManager?.initBluetoothManager()
                 
                 // Log
-                let isLogged = defaults.bool(forKey: "autoLoginFlag")
-                NetworkManager.shared.sendLog(id: propEmail, userType: .User, action: isLogged ? .AutoLogin : .Login)
-                                
+                Task {
+                    let isLogged = defaults.bool(forKey: "autoLoginFlag")
+                    await LogService.shared.sendLog(userType: .User, action: isLogged ? .AutoLogin : .Login)
+                }
+                
                 ToastHelper.shared.showToast(view, "userDataComplete".localized())
-
-            case .failure(let error):
-                print("An error occurred: \(error)")
+            default:
                 ToastHelper.shared.showToast(view, "serverErr".localized())
             }
+            
         }
     }
     
@@ -419,8 +445,8 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
         
         // Left Label Create
         let maxBpmLabel = createLabel("home_maxBpm".localized(), .lightGray, .alignCenters, .left, 14, .bold, nil)
-        let avgBpmLabel = createLabel( "home_avgBpm".localized(), .black, .alignCenters, .left, 16, .bold, nil)
         let minBpmLabel = createLabel("home_minBpm".localized(), .lightGray, .alignCenters, .left, 14, .bold, nil)
+        let avgBpmLabel = createLabel( "home_avgBpm".localized(), .black, .alignCenters, .left, 16, .bold, nil)
         let hrvLabel = createLabel("home_hrv".localized(), .black, .alignCenters, .left, 16, .bold, nil)
         let leftStackView = UIStackView(arrangedSubviews: [maxBpmLabel, avgBpmLabel, minBpmLabel, hrvLabel]).then {
             $0.axis = .vertical
@@ -430,8 +456,8 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
         
         // Middle Label Create
         let maxBpmDiff = createLabel("0", .MY_RED, .alignCenters, .center, 14, .bold, MaxBpmDiff)
-        let avgBpmDiff = createLabel("0", .black, .alignCenters, .center, 14, .bold, MinBpmDiff)
-        let minBpmDiff = createLabel("0", .MY_BLUE, .alignCenters, .center, 14, .bold, AvgBpmDiff)
+        let minBpmDiff = createLabel("0", .MY_BLUE, .alignCenters, .center, 14, .bold, MinBpmDiff)
+        let avgBpmDiff = createLabel("0", .black, .alignCenters, .center, 14, .bold, AvgBpmDiff)
         let hrv = createLabel("0", .black, .alignCenters, .center, 16, .bold, HRV)
         middleStackView = UIStackView(arrangedSubviews: [maxBpmDiff, avgBpmDiff, minBpmDiff, hrv]).then {
             $0.axis = .vertical
@@ -441,8 +467,8 @@ class MainViewController: BaseViewController, BluetoothManagerDelegate {
         
         // Right Label Create
         let maxBpm = createLabel("0", .lightGray, .alignCenters, .right, 14, .medium, MaxBpm)
-        let avgBpm = createLabel("0", .lightGray, .alignCenters, .right, 14, .medium, MinBpm)
-        let minBpm = createLabel("0", .lightGray, .alignCenters, .right, 14, .medium, AvgBpm)
+        let minBpm = createLabel("0", .lightGray, .alignCenters, .right, 14, .medium, MinBpm)
+        let avgBpm = createLabel("0", .lightGray, .alignCenters, .right, 14, .medium, AvgBpm)
         let hrvUnit = createLabel("home_hrv_unit".localized(), .lightGray, .alignCenters, .right, 14, .bold, nil)
         rightStackView = UIStackView(arrangedSubviews: [maxBpm, avgBpm, minBpm, hrvUnit]).then {
             $0.axis = .vertical

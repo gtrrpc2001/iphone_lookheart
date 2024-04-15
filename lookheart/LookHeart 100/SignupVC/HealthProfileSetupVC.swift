@@ -14,7 +14,7 @@ class HealthProfileSetupVC : TitleViewController, UITextFieldDelegate {
     private let MALE_TAG = 1
     private let FEMALE_TAG = 2
     
-    private let email = Keychain.shared.getString(forKey: "email")!
+    private let email = Keychain.shared.getString(forKey: userEmailKey)!
     private var firstName: String = ""
     private var lastName: String = ""
     private var height: String = ""
@@ -368,19 +368,16 @@ class HealthProfileSetupVC : TitleViewController, UITextFieldDelegate {
     }
     
     private func signupServerTask(_ parameters: [String: Any]){
-        
-        NetworkManager.shared.signupToServer(parameters: parameters) { [self] result in
-            switch result {
-            case .success(let isAvailable):
-                if isAvailable {
-                    setNoti()
-                    signupAlert()
-                }
-            case .failure(let error):
+        Task {
+            let response = await ProfileService.shared.postSignup(params: parameters)
+            
+            switch response {
+            case .success:
+                setNoti()
+                signupAlert()
+            default:
                 alert(title: "noti".localized(), message: "serverErr".localized())
                 buttonFlag = false
-                
-                print("Error: \(error.localizedDescription)")
             }
         }
     }
@@ -390,7 +387,7 @@ class HealthProfileSetupVC : TitleViewController, UITextFieldDelegate {
             "kind": "checkReg",
             "eq": email,
             "password": Keychain.shared.getString(forKey: "password")!,
-            "email": Keychain.shared.getString(forKey: "email")!,
+            "email": Keychain.shared.getString(forKey: userEmailKey)!,
             "eqname": setName(),
             "phone": Keychain.shared.getString(forKey: "phone")!,
             "sex": gender,

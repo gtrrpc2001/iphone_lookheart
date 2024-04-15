@@ -21,7 +21,6 @@ public class TenSecondDataManager {
     }
     
     // BPM, HRV
-    
     private var tempCnt = 0.0
     private var tempSum = 0.0
     private var tempAvg = 0.0
@@ -125,7 +124,12 @@ public class TenSecondDataManager {
             "battery": BatteryProgress.shared.getBattery()
         ]
         
-        NetworkManager.shared.sendTenSecondDataToServer(tenSecondData: dataParams, writeDateTime: currentDateTime)
+        Task {
+            await PostData.shared.sendTenSecondData(
+                tenSecondData: dataParams,
+                writeDateTime: currentDateTime
+            )
+        }
         
         updateTenSecondData()
     }

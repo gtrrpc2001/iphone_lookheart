@@ -106,13 +106,16 @@ class FindEmailVC : TitleViewController, UITextFieldDelegate, AuthDelegate {
     }
     
     private func searchID() {
-        NetworkManager.shared.findID(name: setName(), phoneNumber: phoneNumber, birthday: birthday) { [self] result in
-            switch result {
-            case .success(let id):
-                self.id = id
-                searchAlert(id)
-            case .failure(let error):
-                print("searchID Error: \(error)")
+        Task {
+            let getFindID = await ProfileService.shared.getFindID(name: setName(), phoneNumber: phoneNumber, birthday: birthday)
+            let id = getFindID.0
+            let response = getFindID.1
+            
+            switch response {
+            case .success:
+                self.id = id!
+                searchAlert(id!)
+            default:
                 showAlert("unableFindId".localized())
             }
         }
@@ -153,7 +156,7 @@ class FindEmailVC : TitleViewController, UITextFieldDelegate, AuthDelegate {
     }
     
     // MARK: - auth
-    func complete(phoneNumber: String) {
+    func complete(result: String) {
         
         UIView.animate(withDuration: 0.5, animations: {
             self.authPhoneNumber.alpha = 0
@@ -161,8 +164,8 @@ class FindEmailVC : TitleViewController, UITextFieldDelegate, AuthDelegate {
             self.authPhoneNumber.isHidden = true
         }
         
-        self.phoneNumber = phoneNumber
-        phoneNumberField.text = phoneNumber
+        self.phoneNumber = result
+        phoneNumberField.text = result
     }
     
     func cancle() {

@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let _ = NetworkMonitor.shared
+        
         requestNotificationAuthorization()
          
         configureFirebase()
@@ -44,9 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                     
         if propProfil.isLogin {
             
-            // Send Log
-            NetworkManager.shared.sendLog(id: propEmail, userType: .User, action: .Shutdown)
-            
+            Task {
+                // Send Log
+                await LogService.shared.sendLog(userType: .User, action: .Shutdown)
+            }
+                    
             let prevHour = defaults.string(forKey: "\(propEmail)prevHour")!
             
             // Send Data
@@ -59,8 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             HealthDataManager.shared.setUserDefaultData()
             HourlyDataManager.shared.setUserDefaultData()
             
-            defaults.set(propCurrentDate, forKey: "\(propEmail)\(PrevDateKey)")
-            defaults.set(propCurrentHour, forKey: "\(propEmail)\(PrevHourKey)")
         }
         
         sleep(2)

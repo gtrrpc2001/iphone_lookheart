@@ -104,9 +104,7 @@ class NotificationManager {
             // Alert
             emergencyAlert = EmergencyAlert()
             presentModalAlert(emergencyAlert!)
-        } else {
-            EmergencyAlert().getAddress()
-        }
+        } 
     }
     
     

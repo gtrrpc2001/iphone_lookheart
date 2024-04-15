@@ -13,6 +13,8 @@
 "signupButton" = "Sign up";
 
 "idAndPwHelp" = "Enter your email/password";
+"correctIdPwHelp" = "Please enter the correct email and password.";
+
 "loginSuccess" = "Login Success!";
 "duplicateLogin" = "You are being logged in from another location. \nPlease log out of the existing ID and log in again.";
 "loginFailed" = "Login Failed";
@@ -382,9 +384,31 @@
 "AccountDeletion" = "Account Deletion";
 "DeletionText" = "Before leaving LOOKHEART,\nplease check the information below.";
 
+"privacyText" = "Personal Information and Destruction";
+"privacyHelpText" = "Your personal information will be processed in accordance with MSL Co., Ltd.'s privacy policy.\nPersonal information will be retained only for the period specified by law and will be immediately destroyed thereafter.";
+
+"serviceLogText" = "Service Usage Records";
+"serviceLogHelpText" = "In cases where retention is necessary by law (such as transaction records),\nthe information will be kept for the period specified by the law.\nThis applies only when it is necessary to preserve records of service use.";
+
+"reSignupText" = "Re-registration";
+"reSignupHelpText" = "Even if you re-register after cancelling your membership,\nprevious member information and transaction records will not be restored.";
+
+"notesText" = "For more details, you can check in the LOOKHEART Privacy Policy.";
+"AccountDeletionAgreeText" = "I have read all the precautions and agree to all the terms.";
+
+"AccountDeletionAgree" = "Agree to All";
+
+"mismatchesPhoneNumber" = "The phone number does not match.";
+"accountDeletionText" = "Are you sure you want to withdraw?";
 
 // <!--   Server Task   -->
 "serverError" = "Please try again later.";
 "serverInternetError" = "Please check your internet connection.";
 "updateApp" = "An app update is required.\nWould you like to update it in the App Store?";
 
+"dupPhoneNumber" = "The ID already exists for this number.";
+
+
+
+
+"nonNetworkHelpText" ="An internet connection is required.\nDo you want to use limited functions without a connection?";

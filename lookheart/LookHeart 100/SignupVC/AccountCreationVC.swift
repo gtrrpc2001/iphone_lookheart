@@ -170,20 +170,18 @@ class AccountCreationVC : TitleViewController, UITextFieldDelegate {
     }
         
     private func checkID() {
-        NetworkManager.shared.checkIDToServer(id: idInput){ [self] result in
-            switch result {
-            case .success(let isAvailable):
-                if isAvailable {
-                    
-                    setKeyChain(key: "email", value: idInput)
-                    setKeyChain(key: "password", value: pwInput)
-                
-                    self.navigationController?.pushViewController(HealthProfileSetupVC(), animated: true)
-                    
-                } else {
-                    alert(title: "noti".localized(), message: "dupID".localized())
-                }
-            case .failure(_):
+        Task {
+            let response = await ProfileService.shared.getCheckID(id: idInput)
+            
+            switch response {
+            case .success:
+                setKeyChain(key: userEmailKey, value: idInput)
+                setKeyChain(key: "password", value: pwInput)
+            
+                self.navigationController?.pushViewController(HealthProfileSetupVC(), animated: true)
+            case .failer:
+                alert(title: "noti".localized(), message: "dupID".localized())
+            default:
                 alert(title: "noti".localized(), message: "serverErr".localized())
             }
         }

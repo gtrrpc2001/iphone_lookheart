@@ -149,7 +149,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Connected!")
-        NetworkManager.shared.sendBleLog(action: .BleConnect)   // Log
+        sendBleLog(isConnect: true)
         
         connectionFlag = true
         heartRatePeripheral.discoverServices([ServiceCBUUID])
@@ -159,7 +159,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         print("Disconnected!")
         
         if propProfil.isLogin {
-            NetworkManager.shared.sendBleLog(action: .BleDisconnect)    // Log
+            sendBleLog(isConnect: false)
         }
         
         if !isUserInitiatedDisconnect {
@@ -170,6 +170,16 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         }
         
         connectionFlag = false
+    }
+    
+    private func sendBleLog(isConnect: Bool) {
+        Task {
+            if isConnect {
+                await LogService.shared.sendBleLog(action: .BleConnect)
+            } else {
+                await LogService.shared.sendBleLog(action: .BleDisconnect)
+            }
+        }
     }
     
     public func startScanning() {
@@ -285,7 +295,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     
     // MARK: - Received
     private func healthDataReceived(data : [UInt8]) {
-        
         let battery = Int(data[0])
         let bpm = Int(data[1])
         let temperature = Double(data[2])
@@ -308,7 +317,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
              
         // Update UI
         delegate?.didUpdateUI()
-        
     }
     
     
@@ -398,8 +406,6 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             
             sendEcgData()
             
-            HealthDataManager.shared.exerciseTimer() // exercise
-            
             ecgPacket.removeAll()
             ecgCnt = 0
         }
@@ -451,17 +457,11 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         healthDataManager.calculateHealthData()
         
         if prevDate != currentDate {
-            
             handleDateChange()
-            
         } else if prevHour != currentHour {
-            
             handleHourChange()
-            
         } else {
-            
             hourlyTrigger()
-            
         }
         
         tenSecondTrigger()
@@ -510,48 +510,43 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     }
     
     private func hourlyTrigger() {
-        
         if tenSecondCnt == TEN_SECONDS {
-            
             sendHourlyData(hour: currentHour)
-            
         }
-        
     }
     
 
     // MARK: - Send Data
     private func sendEcgData() {
-        
         let currentDateTime = "\(currentDate) \(currentTime)"
         
-        NetworkManager.shared.sendByteEcgDataToServer(ecgData: ecgPacket, bpm: healthDataManager.bpm, writeDateTime: currentDateTime)
-        
+        Task {
+            await PostData.shared.sendEcgData(
+                ecgData: ecgPacket,
+                bpm: healthDataManager.bpm,
+                writeDateTime: currentDateTime
+            )
+        }
     }
         
     
     public func sendTenSecondData() {
-        
         let currentDateTime = "\(currentDate) \(currentTime)"
-        
+
         tenSecondDataManager.sendTenSecondData(currentDateTime)
-        
     }
     
     
     public func sendHourlyData(hour: String) {
-        
         let year = splitDate[0]
         let month = splitDate[1]
         let day = splitDate[2]
         
         hourlyDataManager.sendHourlyData(year, month, day, hour)
-
     }
     
     
     private func sendArrData(type: NotificationManager.NotiType) {
-        
         let currentDateTime = "\(currentDate) \(currentTime)"
         let bodyState = healthDataManager.bodyState
         let arrArray = ecgData.map { String($0) }
@@ -564,24 +559,22 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
             "ecgPacket": arrData
         ]
         
-        NetworkManager.shared.sendArrDataToServer(arrData: arrParams) { [self] result in
+        Task {
+            let response = await PostData.shared.sendArrData(arrData: arrParams)
             
-            switch result {
-            case .success(let isSuccess):
+            switch response {
+            case .success:
                 
-                if isSuccess {
-                    
-                    healthDataManager.arrCnt += 1
-                    hourlyDataManager.arrCnt += 1
-                    tenSecondDataManager.arrCnt += 1
-                    notificationManager.showNotification(noti: type)
-                    
-                    NotificationManager.shared.showAlert(type: .total, arrCnt: healthDataManager.arrCnt)
-                    NotificationManager.shared.showAlert(type: .hourly, arrCnt: hourlyDataManager.arrCnt)
-                }
+                healthDataManager.arrCnt += 1
+                hourlyDataManager.arrCnt += 1
+                tenSecondDataManager.arrCnt += 1
+                notificationManager.showNotification(noti: type)
                 
-            case .failure(let error):
-                print("sendArrData : \(error)")
+                NotificationManager.shared.showAlert(type: .total, arrCnt: healthDataManager.arrCnt)
+                NotificationManager.shared.showAlert(type: .hourly, arrCnt: hourlyDataManager.arrCnt)
+                
+            default:
+                print("send ArrData Error : \(response)")
             }
         }
     }

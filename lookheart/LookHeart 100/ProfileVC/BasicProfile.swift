@@ -414,15 +414,14 @@ class BasicProfile: UIView, UITextFieldDelegate {
             "differtime": "1"
         ]
         
-        NetworkManager.shared.signupToServer(parameters: userData) { [self] result in
-            switch result {
-            case .success(let isAvailable):
-                if isAvailable {
-                    alert(title: "saveData".localized(), message: nil)
-                }
-            case .failure(let error):
+        Task {
+            let response = await ProfileService.shared.postSignup(params: userData)
+            
+            switch response {
+            case .success:
+                alert(title: "saveData".localized(), message: nil)
+            default:
                 alert(title: "failSaveData".localized(), message: nil)
-                print("Error: \(error.localizedDescription)")
             }
         }
     }

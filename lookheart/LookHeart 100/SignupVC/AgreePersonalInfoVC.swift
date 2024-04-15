@@ -13,6 +13,7 @@ class AgreePersonalInfoVC : TitleViewController, AuthDelegate {
     private let authPhoneNumber = AuthPhoneNumber().then {
         $0.isHidden = true
         $0.alpha = 0
+        $0.sms = false
     }
     
     private let signupText = UILabel().then {
@@ -122,7 +123,7 @@ class AgreePersonalInfoVC : TitleViewController, AuthDelegate {
     }
     
     // MARK: Auth
-    func complete(phoneNumber: String) {
+    func complete(result: String) {
         
         UIView.animate(withDuration: 0.5, animations: {
             self.authPhoneNumber.alpha = 0
@@ -130,19 +131,21 @@ class AgreePersonalInfoVC : TitleViewController, AuthDelegate {
             self.authPhoneNumber.isHidden = true
         }
         
-        Keychain.shared.setValue(phoneNumber, forKey: "phone")
-        self.navigationController?.pushViewController(AccountCreationVC(), animated: true)
-        
+        if !result.contains("false") {
+            Keychain.shared.setValue(result, forKey: "phone")
+            self.navigationController?.pushViewController(AccountCreationVC(), animated: true)
+        } else {
+            // 사용자 존재
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func cancle() {
-
         UIView.animate(withDuration: 0.5, animations: {
             self.authPhoneNumber.alpha = 0
         }) { _ in
             self.authPhoneNumber.isHidden = true
         }
-        
     }
     
     // MARK: - add View

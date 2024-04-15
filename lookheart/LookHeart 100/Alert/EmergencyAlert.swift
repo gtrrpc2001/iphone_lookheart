@@ -54,11 +54,13 @@ class EmergencyAlert: UIViewController {
 
     
     @objc func updateCountdown() {
+        print(countdown)
         if countdown > 0 {
+            print("check1")
             countdown -= 1
             updateButton(text: "\("ok".localized())(\(countdown))")
         } else {
-            
+            print("check2")
             countdownTimer?.invalidate()
             countdownTimer = nil
             
@@ -82,23 +84,19 @@ class EmergencyAlert: UIViewController {
     }
     
     private func sendEmergency(address: String) {
-        NetworkManager.shared.sendEmergencyData(address, propCurrentDateTime) { result in
-            switch result {
-                
-            case .success(let success):
-                
-                if success {
-                    self.updateButton(text: "sendEmergencyAlert".localized())
-                } else {
-                    self.updateButton(text: "failureEmergency".localized())
-                }
-                
-            case .failure(_):
+        Task {
+            let response = await PostData.shared.postEmergency(address, propCurrentDateTime)
+            
+            switch response {
+            case .success:
+                self.updateButton(text: "sendEmergencyAlert".localized())
+            case .failer:
+                self.updateButton(text: "failureEmergency".localized())
+            default:
                 self.updateButton(text: "failureEmergency".localized())
             }
         }
     }
-    
     
     func updateMessage(message: String){
         alertMessageLabel!.text = message

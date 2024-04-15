@@ -117,7 +117,7 @@ class ProfileVC: BaseViewController, UITextFieldDelegate, AuthDelegate, settingD
         isHidden(true)
     }
     
-    func complete(phoneNumber: String) {
+    func complete(result: String) {
         
         isHidden(false)
         
@@ -158,22 +158,17 @@ class ProfileVC: BaseViewController, UITextFieldDelegate, AuthDelegate, settingD
     private func checkAccount(password: String) {
         let id = propEmail
         
-        NetworkManager.shared.checkLoginToServer(id: id, pw: password, destroy: true) { result in
-            switch result {
-            case .success(let checkAccount):
-                switch checkAccount {
-                    
-                case .successLogin:
-                    self.accountDeletion.password = password
-                    self.navigationController?.pushViewController(self.accountDeletion, animated: true)
-                case .failureLogin:
-                    propAlert.basicAlert(title: "noti".localized(), message: "incorrectlyLogin".localized(), ok: "ok".localized(), viewController: self)
-                case .duplicateLogin:
-                    propAlert.basicAlert(title: "noti".localized(), message: "duplicateLogin".localized(), ok: "ok".localized(), viewController: self)
-                }
-
-            case .failure(_):
+        Task {
+            let response = await LoginService.shared.loginTask(id, password, true)
+            
+            switch response {
+            case .success:
+                self.accountDeletion.password = password
+                self.navigationController?.pushViewController(self.accountDeletion, animated: true)
+            case .failer:
                 propAlert.basicAlert(title: "noti".localized(), message: "reconfirmPW".localized(), ok: "ok".localized(), viewController: self)
+            default:
+                propAlert.basicAlert(title: "noti".localized(), message: "serverInternetError".localized(), ok: "ok".localized(), viewController: self)
             }
         }
     }

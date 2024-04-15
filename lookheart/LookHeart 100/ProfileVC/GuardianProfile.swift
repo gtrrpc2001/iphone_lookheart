@@ -117,20 +117,15 @@ class GuardianProfile: UIView, UITextFieldDelegate {
     private func setGuardian() {
         let phoneNumber = UserProfileManager.shared.guardianPhoneNumber
         
-        NetworkManager.shared.setGuardianToServer(phone: phoneNumber) { [self] result in
-            switch result {
-            case .success(_):
-                
+        Task {
+            let response = await ProfileService.shared.postGuardian(phone: phoneNumber)
+            
+            switch response {
+            case .success:
                 updateProfile()
-                
                 showToast("setGuardianComp".localized())
-
-            case .failure(let error):
-                
-                print("setGuardian err: \(error)")
-                
+            default:
                 showToast("setGuardianFail".localized())
-                
             }
         }
     }

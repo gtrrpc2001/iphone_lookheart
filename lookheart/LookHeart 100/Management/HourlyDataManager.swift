@@ -54,8 +54,7 @@ public class HourlyDataManager {
             }
         } else {
             
-            resetHourlyData()
-            setUserDefaultData()
+            resetDefaultHourlyData()
             
             defaults.set(propCurrentHour, forKey: "\(propEmail)\(PrevHourKey)")
             
@@ -65,6 +64,11 @@ public class HourlyDataManager {
     
     public func resetHourlyData() {
         hourlyData.reset()
+    }
+    
+    public func resetDefaultHourlyData() {
+        hourlyData.reset()
+        setUserDefaultData()
     }
     
     
@@ -121,6 +125,7 @@ public class HourlyDataManager {
         distanceM = defaults.double(forKey: "\(propEmail)\(HourlyDistanceM)")
         calorie = defaults.double(forKey: "\(propEmail)\(HourlyCalorie)")
         activityCalorie = defaults.double(forKey: "\(propEmail)\(HourlyActivityCalorie)")
+    
     }
     
     public func setUserDefaultData() {
@@ -155,8 +160,7 @@ public class HourlyDataManager {
             "arrcnt": arrCnt
         ]
         
-        NetworkManager.shared.sendHourlyDataToServer(hourlyData: hourlyDataParams)
-        
+        Task { await PostData.shared.sendHourlyData(hourlyData: hourlyDataParams) }
     }
         
     
